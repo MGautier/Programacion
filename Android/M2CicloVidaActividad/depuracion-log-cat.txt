@@ -1,0 +1,15 @@
+Al depurar la aplicación con LogCat se puede observar lo siguiente:
+
+- Al abrir la aplicación:
+-> Ejecutando onStart y onResume
+
+- Al cambiar la aplicación (pulsar el botón atrás):
+> Ejecutando onPause, onStop, onDestroy
+
+- Al cambiar la aplicación (pulsando el botón del teléfono):
+-> Ejecutando onPause, onStop
+
+- Desconectamos el cable y volvemos a conectar y ejecutar la aplicación:
+-> Ejecutando onRestart, onStart, onResume
+
+

@@ -1,0 +1,30 @@
+<resources>
+    <string-array name="preferencias_sensibilidad">
+        <item>@string/muy_alto</item>
+        <item>@string/alto</item>
+        <item>@string/medio</item>
+        <item>@string/bajo</item>  
+        <item>@string/muy_bajo</item>  
+    </string-array>
+
+    <string-array name="valores_sensibilidad">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>  
+        <item>40</item>  
+        <item>50</item>  
+    </string-array>
+
+    <string-array name="preferencias_nivel_trabajo">
+        <item>@string/background</item>
+        <item>@string/atenuado</item>
+        <item>@string/encendido</item>
+    </string-array>
+
+    <string-array name="valores_nivel_trabajo">
+        <item>run_in_background</item>
+        <item>keep_screen_on</item>
+        <item>wake_up</item>
+    </string-array>
+
+</resources>

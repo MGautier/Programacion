@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Podometro</string>
+    <string name="notification_subtitle">Contando tus pasos</string>
+    <!-- Settings -->
+    <string name="activity_settings">Ajustes Podometro</string>
+    <string name="steps_settings_title">Ajustes Basicos</string>
+
+    <string name="quit">Salir</string>
+    
+    <string name="pasos">Pasos</string>
+    <string name="kilometros">Kilometros</string>
+    <string name="pasos_por_minuto">Pasos / minuto</string>
+    <string name="kilometros_por_hora">Kilometros / hora</string>
+    
+    <string name="ajustes">Ajustes</string>
+    <string name="ajuste_sensibilidad">Sensibilidad</string>
+    <string name="detalle_ajuste_sensibilidad">Calibrar el detector de pasos</string>
+    <string name="titulo_sensibilidad">Selecciona el nivel de sensibilidad</string>
+    <string name="muy_alto">Muy alto</string>
+    <string name="alto">Alto</string>
+    <string name="medio">Medio</string>
+    <string name="bajo">Bajo</string>
+    <string name="muy_bajo">Muy bajo</string>
+    <string name="nivel_trabajo">Nivel de trabajo</string>
+    <string name="detalle_nivel_trabajo">Que hacer si se apaga la pantalla</string>
+    <string name="titulo_nivel_trabajo">Selecciona el modo</string>
+    <string name="background">Normal (intenta trabajar en background)</string>
+    <string name="atenuado">Medio (pantalla atenuada)</string>
+    <string name="encendido">Agresivo (nunca apaga la pantalla)</string>
+    <string name="ajuste_longitud_paso">Medida de tu paso</string>
+    <string name="detalle_ajuste_longitud_paso">Para calcular la distancia</string>
+    <string name="titulo_longitud_paso">Dinos cuanto mide tu paso</string>
+    <string name="centimetros">Centimetros</string>
+    <string name="iniciado">Podometro iniciado.</string>
+    <string name="parado">Podometro parado.</string>
+    <string name="pausa">Pausa</string>
+    <string name="continuar">Continuar</string>
+    <string name="reset">Comenzar de nuevo</string>
+</resources>

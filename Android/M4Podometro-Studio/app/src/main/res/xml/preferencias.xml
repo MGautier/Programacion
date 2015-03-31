@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+            android:title="@string/ajustes">
+            
+        <ListPreference
+                android:key="sensibilidad"
+                android:title="@string/ajuste_sensibilidad"
+                android:summary="@string/detalle_ajuste_sensibilidad"
+                android:entries="@array/preferencias_sensibilidad"
+                android:entryValues="@array/valores_sensibilidad"
+                android:dialogTitle="@string/titulo_sensibilidad"
+                android:defaultValue="30" />
+
+        <ListPreference
+                android:key="nivel_trabajo"
+                android:title="@string/nivel_trabajo"
+                android:summary="@string/detalle_nivel_trabajo"
+                android:entries="@array/preferencias_nivel_trabajo"
+                android:entryValues="@array/valores_nivel_trabajo"
+                android:dialogTitle="@string/titulo_nivel_trabajo"
+                android:defaultValue="30" />
+
+        <apps.curso.podometro.preferencias.PreferenciasPaso
+                android:key="longitud_paso"
+                android:title="@string/ajuste_longitud_paso"
+                android:summary="@string/detalle_ajuste_longitud_paso"
+                android:dialogTitle="@string/titulo_longitud_paso"
+                android:defaultValue="20" />
+            
+    </PreferenceCategory>
+                
+</PreferenceScreen>
