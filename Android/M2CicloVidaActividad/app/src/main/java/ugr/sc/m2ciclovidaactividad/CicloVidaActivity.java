@@ -4,9 +4,52 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.util.Log;
 
 
 public class CicloVidaActivity extends ActionBarActivity {
+
+    /* Atributos de la clase */
+
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(szCabecera,"Ejecutando onStart");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d(szCabecera,"Ejecutando onPause");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d(szCabecera,"Ejecutando onRestart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(szCabecera,"Ejecutando onResume");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(szCabecera,"Ejecutando onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(szCabecera,"Ejecutando onDestroy");
+    }
+
+    String szCabecera = "Función en ejecución";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
