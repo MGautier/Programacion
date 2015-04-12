@@ -21,11 +21,11 @@
             android:layout_height="100dp"
             android:textStyle="italic"
 
-            />
+            android:textSize="32dp" />
 
         <TextView
             android:id="@+id/imagen"
-            android:layout_height="match_parent"
+            android:layout_height="95dp"
             android:layout_width="wrap_content"
             android:background="@drawable/running_man"
             />
@@ -36,16 +36,14 @@
             android:layout_height="100dp"
             android:textStyle="italic"
 
-            />
+            android:textSize="32dp" />
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dip"
-        >
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@id/unidades_paso"
@@ -82,31 +80,31 @@
             android:layout_height="100dp"
             android:textStyle="italic"
 
-            />
+            android:textColor="@android:color/black"
+            android:textSize="32dp" />
 
         <TextView
             android:id="@+id/imagen2"
-            android:layout_height="125dp"
+            android:layout_height="85dp"
 
             android:background="@drawable/speedometer"
-            />
+            android:layout_width="95dp" />
 
         <TextView
-            android:id="@id/distancia"
+            android:id="@+id/velocidad"
             android:layout_width="190dp"
             android:layout_height="100dp"
             android:textStyle="italic"
 
-            />
+            android:textColor="@android:color/black"
+            android:textSize="32dp" />
 
     </TableRow>
 
     <TableRow
         android:id="@+id/tableRow4"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dip"
-        >
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@id/unidades_ratio"
@@ -117,7 +115,7 @@
             android:layout_gravity="center_horizontal"
             />
 
-        <TextView />
+        <TextView android:layout_width="wrap_content" />
         <TextView
             android:id="@id/unidades_velocidad"
             android:text="@string/kilometros_por_hora"
