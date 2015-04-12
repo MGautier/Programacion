@@ -1,139 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:paddingTop="@dimen/margin" 
-    android:paddingLeft="@dimen/margin" 
+    android:paddingTop="@dimen/margin"
+    android:paddingLeft="@dimen/margin"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:stretchColumns="1"
     android:background="#ffffffff">
-        
-    <TableRow>
-        
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
-        
-            <LinearLayout android:id="@+id/row_1"
-                android:orientation="horizontal" 
-                android:layout_width="fill_parent" 
-                android:layout_height="wrap_content" 
-                android:paddingBottom="@dimen/row_spacing">
-            
-                <LinearLayout android:id="@+id/cuadro_pasos"
-                    android:orientation="vertical"
-                    android:layout_width="@dimen/box_width" 
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:paddingRight="@dimen/margin">
 
-                    <TextView android:id="@+id/pasos"
-                        android:textSize="@dimen/value"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:background="@color/display_background"
-                        android:paddingLeft="@dimen/padding"
-                        android:paddingRight="@dimen/padding"
-                        android:paddingTop="@dimen/padding"/>
-                    <TextView android:id="@+id/unidades_paso"
-                        android:gravity="center_horizontal"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="@dimen/units" 
-                        android:text="@string/pasos" 
-                        android:background="@color/display_background" 
-                        android:paddingBottom="@dimen/padding"/>
-        
-                </LinearLayout>
-        
-                <LinearLayout android:id="@+id/cuadro_distancia"
-                    android:orientation="vertical"
-                    android:layout_width="@dimen/box_width" 
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal">
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        >
 
-                    <TextView android:id="@+id/distancia"
-                        android:textSize="@dimen/value"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:background="@color/display_background"
-                        android:paddingTop="@dimen/padding"
-                        android:paddingRight="@dimen/padding"
-                        android:paddingLeft="@dimen/padding"/>
-                    <TextView android:id="@+id/unidades_distancia"
-                        android:gravity="center_horizontal"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="@dimen/units"
-                        android:text="@string/kilometros" 
-                        android:background="@color/display_background" 
-                        android:paddingBottom="@dimen/padding"/>
-        
-                </LinearLayout>
-            </LinearLayout>
-                
-            <LinearLayout android:id="@+id/row_2"
-                android:orientation="horizontal" 
-                android:layout_width="fill_parent" 
-                android:layout_height="wrap_content" 
-                android:paddingBottom="@dimen/row_spacing">
-            
-                <LinearLayout android:id="@+id/cuadro_ratio"
-                    android:orientation="vertical" 
-                    android:layout_height="wrap_content"
-                    android:paddingRight="@dimen/margin" 
-                    android:layout_width="@dimen/third_box_width">
-                
-                    <TextView android:id="@+id/ratio"
-                        android:gravity="center_horizontal"
-                        android:layout_width="fill_parent" 
-                        android:layout_height="wrap_content" 
-                        android:background="@color/display_background" 
-                        android:textSize="@dimen/small_value" 
-                        android:paddingLeft="@dimen/padding" 
-                        android:paddingRight="@dimen/padding" 
-                        android:paddingTop="@dimen/padding"/>
-                    <TextView android:id="@+id/unidades_ratio"
-                        android:gravity="center_horizontal"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="@dimen/units"
-                        android:text="@string/pasos_por_minuto" 
-                        android:paddingBottom="@dimen/padding" 
-                        android:background="@color/display_background"/>
-                                 
-                </LinearLayout>
-        
-                <LinearLayout android:id="@+id/cuadro_velocidad"
-                    android:orientation="vertical"
-                    android:paddingRight="@dimen/margin"  
-                    android:layout_height="wrap_content" 
-                    android:layout_width="@dimen/third_box_width">
-                
-                    <TextView android:id="@+id/velocidad"
-                        android:gravity="center_horizontal"
-                        android:layout_width="fill_parent" 
-                        android:layout_height="wrap_content" 
-                        android:background="@color/display_background" 
-                        android:textSize="@dimen/small_value" 
-                        android:paddingLeft="@dimen/padding" 
-                        android:paddingRight="@dimen/padding" 
-                        android:paddingTop="@dimen/padding"/>
-                    <TextView android:id="@+id/unidades_velocidad"
-                        android:gravity="center_horizontal"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="@dimen/units"
-                        android:text="@string/kilometros_por_hora" 
-                        android:paddingBottom="@dimen/padding" 
-                        android:background="@color/display_background"/>
-                </LinearLayout>
-        
-            </LinearLayout>
-        </LinearLayout>
+
+        <TextView
+            android:id="@id/pasos"
+            android:layout_width="190dp"
+            android:layout_height="100dp"
+            android:textStyle="italic"
+
+            />
+
+        <TextView
+            android:id="@+id/imagen"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:background="@drawable/running_man"
+            />
+
+        <TextView
+            android:id="@id/distancia"
+            android:layout_width="190dp"
+            android:layout_height="100dp"
+            android:textStyle="italic"
+
+            />
 
     </TableRow>
-    
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        >
+
+        <TextView
+            android:id="@id/unidades_paso"
+            android:text="@string/pasos"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView />
+        <TextView
+            android:id="@id/unidades_distancia"
+            android:text="@string/kilometros"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:padding="5dip"
+        >
+
+
+        <TextView
+            android:id="@id/ratio"
+            android:layout_width="190dp"
+            android:layout_height="100dp"
+            android:textStyle="italic"
+
+            />
+
+        <TextView
+            android:id="@+id/imagen2"
+            android:layout_height="125dp"
+
+            android:background="@drawable/speedometer"
+            />
+
+        <TextView
+            android:id="@id/distancia"
+            android:layout_width="190dp"
+            android:layout_height="100dp"
+            android:textStyle="italic"
+
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dip"
+        >
+
+        <TextView
+            android:id="@id/unidades_ratio"
+            android:text="@string/pasos_por_minuto"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <TextView />
+        <TextView
+            android:id="@id/unidades_velocidad"
+            android:text="@string/kilometros_por_hora"
+            android:textAppearance="?android:attr/textAppearanceLargeInverse"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            />
+
+    </TableRow>
 </TableLayout>
