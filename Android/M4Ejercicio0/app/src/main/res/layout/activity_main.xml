@@ -32,6 +32,7 @@
             android:paddingTop="25dp"
             android:paddingBottom="25dp"
             android:layout_gravity="center_horizontal"
+            style="@style/MyStyle"
         />
 
         <Button

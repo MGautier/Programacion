@@ -5,4 +5,22 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="MyStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#AEC6CF</item>
+    </style>
+
+    <style name="GreenText" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#OOFFOO</item>
+    </style>
+
+    <style name="Red">
+        <item name="android:textColor">#FF0000</item>
+    </style>
+
+    <style name="Red.Big">
+        <item name="android:textSize">30sp</item>
+    </style>
+
 </resources>
