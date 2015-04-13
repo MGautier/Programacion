@@ -3,4 +3,6 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="prueba">Este texto es de prueba</string>
+    <string name="editable">Introduce aquí el texto a editar</string>
 </resources>
