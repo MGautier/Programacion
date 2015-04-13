@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 public class MainActivity extends ActionBarActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,10 +21,9 @@ public class MainActivity extends ActionBarActivity {
         final Button pulsar = (Button) findViewById(R.id.boton);
         pulsar.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                final EditText texto_capturar = (EditText) findViewById(R.id.editable);
-                final TextView texto_mostrar = (TextView) findViewById(R.id.visualizacion);
-                texto_mostrar.setText("");
+            public void onClick(View v) {
+                TextView texto_mostrar = (TextView) findViewById(R.id.visualizacion);
+                EditText texto_capturar = (EditText) findViewById(R.id.editable);
                 texto_mostrar.setText(texto_capturar.getText());
             }
         });
