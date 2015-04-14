@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">M4DialogsE</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="choice">Escoge una opción</string>
+    <string name="dialog_boton">Dialogo de botones</string>
+    <string name="dialog_listas">Dialogo de listas</string>
+    <string name="dialog_checkbox">Dialogo de checkbox</string>
+    <string name="dialog_radio">Dialogo de radiobutton</string>
+
+</resources>
