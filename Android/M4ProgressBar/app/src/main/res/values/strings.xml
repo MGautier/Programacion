@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">M4ProgressBar</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello">ProgressBarExample</string>
+
+    <string name="Button01Text">Show Spinner Progress Bar</string>
+    <string name="Button02Text">Show Horizontal Progress Bar</string>
+</resources>
