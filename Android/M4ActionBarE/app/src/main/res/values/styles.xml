@@ -1,0 +1,11 @@
+<resources>
+
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+
+        <!--Estilos de ventana-->
+        <item name="android:windowFullscreen">true</item>
+
+
+    </style>
+
+</resources>
