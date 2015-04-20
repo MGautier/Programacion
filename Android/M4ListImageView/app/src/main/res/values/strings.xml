@@ -3,4 +3,6 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="texto_medio">Texto medio</string>
+    <string name="texto">Texto</string>
 </resources>
