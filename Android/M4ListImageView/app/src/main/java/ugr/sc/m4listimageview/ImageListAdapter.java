@@ -2,6 +2,7 @@ package ugr.sc.m4listimageview;
 
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,33 +10,64 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class ImageListAdapter extends ArrayAdapter<String> {
+import java.util.Iterator;
+import java.util.List;
 
-    private final Activity context;
-    private final String[] items;
-    private final Integer[] imagenes;
+public class ImageListAdapter<T> extends ArrayAdapter {
 
-    public ImageListAdapter(Activity context, String[] items, Integer[] imagenes)
+
+    private final Activity context; //Obtenemos el context del Activity
+    private final ListadoPartidos listadoPartidos; //Instancio la clase ListadoPartidos
+
+
+    /**
+     * Constructor de la clase
+     * @param context Context del Activity principal
+     * @param object Clase ListadoPartidos que contiene los partidos de la jornada
+     */
+
+    public ImageListAdapter(Activity context, ListadoPartidos object)
     {
-        super(context, R.layout.listimageview, items);
+        super(context, R.layout.listimageview, (List) object);
 
         this.context = context;
-        this.items = items;
-        this.imagenes = imagenes;
+        this.listadoPartidos = object;
+
     }
+
+    /**
+     * Método consultor
+     * @param position Índice de la posicion de la ListView en el Activity
+     * @param view Objeto de la clase View
+     * @param parent Objeto de la clase ViewGroup
+     * @return Devuelve la vista para el Activity
+     */
 
     public View getView(int position, View view, ViewGroup parent)
     {
         LayoutInflater inflater = context.getLayoutInflater();
         View rowView = inflater.inflate(R.layout.listimageview, null, true);
 
-        TextView titulo = (TextView) rowView.findViewById(R.id.item_uno);
-        ImageView imagen = (ImageView) rowView.findViewById(R.id.image_icon);
-        TextView extra = (TextView) rowView.findViewById(R.id.item_dos);
+        ImageView escudo_local = (ImageView) rowView.findViewById(R.id.local);
+        TextView equipo_local = (TextView) rowView.findViewById(R.id.equipo_local);
+        TextView hora = (TextView) rowView.findViewById(R.id.hora_partido);
 
-        titulo.setText(items[position]);
-        imagen.setImageResource(imagenes[position]);
-        extra.setText("Descripción" + items[position]);
+        TextView equipo_visitante = (TextView) rowView.findViewById(R.id.equipo_visitante);
+        TextView television = (TextView) rowView.findViewById(R.id.tipo_visualizacion);
+        ImageView escudo_visitante = (ImageView) rowView.findViewById(R.id.visitante);
+
+        Iterator<Partido> iterator = listadoPartidos.partidos.iterator();
+
+        while (iterator.hasNext())
+        {
+            escudo_local.setImageDrawable(Drawable.createFromPath(iterator.next().getEquipoLocal().getEscudo() + ".png"));
+            equipo_local.setText(iterator.next().getEquipoLocal().getEquipo());
+            hora.setText(iterator.next().getHora());
+
+            equipo_visitante.setText(iterator.next().getEquipoVisitante().getEquipo());
+            television.setText(iterator.next().getTelevision());
+            escudo_visitante.setImageDrawable(Drawable.createFromPath(iterator.next().getEquipoVisitante().getEscudo() + ".png"));
+        }
 
         return rowView;
     };

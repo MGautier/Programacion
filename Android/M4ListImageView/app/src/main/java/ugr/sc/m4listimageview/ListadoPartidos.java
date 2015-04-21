@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class ListadoPartidos {
 
-    static public ArrayList<Partido> partidos = new ArrayList<Partido>();
+    static public List partidos = new ArrayList<Partido>();
 
     static private Equipo eq_uno = new Equipo("Real Madrid CF", "www.realmadrid.com", "rm_cf_logo");
     static private Equipo eq_dos = new Equipo("FC Barcelona", "www.fcbarcelona.es", "fc_b_logo" );
