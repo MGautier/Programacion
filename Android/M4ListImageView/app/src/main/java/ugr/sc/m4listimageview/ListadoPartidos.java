@@ -38,4 +38,11 @@ public class ListadoPartidos {
     }
 
 
+    public Partido getPartido(Integer item)
+    {
+        if(item < partidos.size())
+            return (Partido) partidos.get(item);
+        else
+            return null;
+    }
 }

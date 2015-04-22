@@ -10,10 +10,14 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.util.List;
+
 
 public class MainActivity extends ActionBarActivity {
 
     ListView list;
+    ImageListAdapter adapter;
+
     String[] nombres = {
             "Safari",
             "Camera",
@@ -25,7 +29,7 @@ public class MainActivity extends ActionBarActivity {
             "Cold War"
     };
 
-    Integer[] imagenes = {
+    /*Integer[] imagenes = {
             R.mipmap.pic1,
             R.mipmap.pic2,
             R.mipmap.pic3,
@@ -34,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
             R.mipmap.pic6,
             R.mipmap.pic7,
             R.mipmap.pic8,
-    };
+    };*/
 
 
     @Override
@@ -43,16 +47,18 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageListAdapter adapter = new ImageListAdapter(this,nombres,imagenes);
         list = (ListView) findViewById(R.id.lista);
+
+        adapter = new ImageListAdapter<Partido>(this,ListadoPartidos.partidos);
+
         list.setAdapter(adapter);
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String Item_selected = nombres[+position];
                 Toast.makeText(getApplicationContext(), Item_selected, Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
     }
 }
