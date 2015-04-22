@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">M4FragmentE</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="hint">Escribir</string>
+    <string name="button">Enviar</string>
+    <string name="action_settings">Settings</string>
+</resources>
