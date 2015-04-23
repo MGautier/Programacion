@@ -13,7 +13,12 @@ import android.widget.Button;
 
 
 public class MainActivity extends Activity {
+
     private Button add_fragment ;
+    private FragmentManager fragmentManager;
+    private FragmentTransaction transaction;
+    private BlankFragment fragment;
+
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -28,12 +33,20 @@ public class MainActivity extends Activity {
             public void onClick(View v) {
                //TODO instanciar el fragment BlankFragment de forma dinámica
 
-                FragmentManager fragmentManager = getFragmentManager();
-                FragmentTransaction transaction = fragmentManager.beginTransaction();
+                Fragment main_fragment = getFragmentManager().findFragmentByTag("main_fragment");
 
-                BlankFragment fragment = new BlankFragment();
 
-                transaction.add(R.id.contenedor,fragment);
+                if(main_fragment != null)
+                {
+                    getFragmentManager().beginTransaction().remove(main_fragment).commit();
+                }
+
+                fragmentManager = getFragmentManager();
+                transaction = fragmentManager.beginTransaction();
+
+                fragment = new BlankFragment();
+
+                transaction.add(R.id.contenedor,fragment,"main_fragment");
                 transaction.commit();
 
 
