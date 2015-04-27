@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements View.OnClickListener{
 
     private Button add_fragment ;
     private FragmentManager fragmentManager;
@@ -28,30 +28,7 @@ public class MainActivity extends Activity {
         add_fragment = (Button)findViewById(R.id.add_fragment);
 
         //Seteando la escucha del botón
-        add_fragment.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               //TODO instanciar el fragment BlankFragment de forma dinámica
-
-                Fragment main_fragment = getFragmentManager().findFragmentByTag("main_fragment");
-
-
-                if(main_fragment != null)
-                {
-                    getFragmentManager().beginTransaction().remove(main_fragment).commit();
-                }
-
-                fragmentManager = getFragmentManager();
-                transaction = fragmentManager.beginTransaction();
-
-                fragment = new BlankFragment();
-
-                transaction.add(R.id.contenedor,fragment,"main_fragment");
-                transaction.commit();
-
-
-            }
-        });
+        add_fragment.setOnClickListener(this);
     }
 
 
@@ -75,5 +52,20 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        
+        Fragment main_fragment = getFragmentManager().findFragmentByTag("main_fragment");
+
+        fragmentManager = getFragmentManager();
+        transaction = fragmentManager.beginTransaction();
+        transaction.remove(main_fragment).commit();
+
+        fragment = new BlankFragment();
+
+        transaction.add(R.id.contenedor,fragment,"main_fragment");
+        transaction.commit();
     }
 }

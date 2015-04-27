@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <!-- El imageView primero delimita la parte superior
+        de la pantalla en donde vemos la imagen asociada al
+        fragment -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:id="@+id/imageView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+    />
+
+    <!-- El TextView delimita la parte inferior de la pantalla
+        en donde pondremos el titulo del fragment actual
+        que se esta visualizando -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@android:id/text1"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:padding="32dp"
+        android:layout_below="@+id/imageView"
+        android:textColor="#c23"
+        android:textStyle="bold"
+    />
+
+</RelativeLayout>
