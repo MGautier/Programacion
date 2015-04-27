@@ -11,16 +11,16 @@ public class ListadoPartidos {
 
     static public List partidos = new ArrayList<Partido>();
 
-    static private Equipo eq_uno = new Equipo("Real Madrid CF", "www.realmadrid.com", "rm_cf_logo");
-    static private Equipo eq_dos = new Equipo("FC Barcelona", "www.fcbarcelona.es", "fc_b_logo" );
-    static private Equipo eq_tres = new Equipo("Granada CF", "www.granadacf.es", "gr_cf_logo");
-    static private Equipo eq_cuatro = new Equipo("Malaga CF", "www.malagacf.com", "mal_cf_logo");
-    static private Equipo eq_cinco = new Equipo("Valencia CF", "www.valenciacf.com", "val_cf_logo");
-    static private Equipo eq_seis = new Equipo("RC Deportivo", "www.canaldeportivo.com", "rcd_logo");
-    static private Equipo eq_siete = new Equipo("Elche CF", "www.elchecf.es", "elche_logo");
-    static private Equipo eq_ocho = new Equipo("Levante UD", "es.levanteud.com", "lev_ud_logo");
-    static private Equipo eq_nueve = new Equipo("Sevilla FC", "www.sevillafc.es", "sev_fc_logo");
-    static private Equipo eq_diez = new Equipo("UD Almería", "www.udalmeriasad.com", "ud_alm_logo");
+    static private Equipo eq_uno = new Equipo("Real Madrid CF", "www.realmadrid.com", R.mipmap.rm_cf_logo);
+    static private Equipo eq_dos = new Equipo("FC Barcelona", "www.fcbarcelona.es", R.mipmap.fc_b_logo );
+    static private Equipo eq_tres = new Equipo("Granada CF", "www.granadacf.es", R.mipmap.gr_cf_logo);
+    static private Equipo eq_cuatro = new Equipo("Malaga CF", "www.malagacf.com", R.mipmap.mal_cf_logo);
+    static private Equipo eq_cinco = new Equipo("Valencia CF", "www.valenciacf.com", R.mipmap.val_cf_logo);
+    static private Equipo eq_seis = new Equipo("RC Deportivo", "www.canaldeportivo.com", R.mipmap.rcd_logo);
+    static private Equipo eq_siete = new Equipo("Elche CF", "www.elchecf.es", R.mipmap.elche_logo);
+    static private Equipo eq_ocho = new Equipo("Levante UD", "es.levanteud.com", R.mipmap.lev_ud_logo);
+    static private Equipo eq_nueve = new Equipo("Sevilla FC", "www.sevillafc.es", R.mipmap.sev_fc_logo);
+    static private Equipo eq_diez = new Equipo("UD Almería", "www.udalmeriasad.com", R.mipmap.ud_alm_logo);
 
 
     static private Partido partido_uno = new Partido(eq_tres,eq_cuatro,"20:00","En abierto");
@@ -38,7 +38,7 @@ public class ListadoPartidos {
     }
 
 
-    public Partido getPartido(Integer item)
+    public static Partido getPartido(Integer item)
     {
         if(item < partidos.size())
             return (Partido) partidos.get(item);

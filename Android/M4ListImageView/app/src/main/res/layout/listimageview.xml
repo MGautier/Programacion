@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
+    android:orientation="horizontal" android:layout_width="fill_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/local"
-        android:layout_width="60dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:padding="5dp"
-    />
+        android:layout_weight="1" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_weight="1">
 
         <TextView
             android:id="@+id/equipo_local"
@@ -21,32 +21,29 @@
             android:layout_height="wrap_content"
             android:text="@string/texto_medio"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:padding="2dp"
 
-        />
+            />
 
         <TextView
             android:id="@+id/hora_partido"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/texto"
-            android:layout_marginLeft="10dp"
-        />
+            android:text="@string/texto" />
 
-     </LinearLayout>
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_weight="1.2">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="-"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="5dp"
             android:padding="5dp"
             />
@@ -54,9 +51,10 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_weight="1">
 
         <TextView
             android:id="@+id/equipo_visitante"
@@ -64,8 +62,6 @@
             android:layout_height="wrap_content"
             android:text="@string/texto_medio"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="5dp"
             android:padding="2dp"
 
             />
@@ -74,18 +70,14 @@
             android:id="@+id/tipo_visualizacion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/texto"
-            android:layout_marginLeft="10dp"
-            />
+            android:text="@string/texto" />
 
     </LinearLayout>
 
     <ImageView
         android:id="@+id/visitante"
-        android:layout_width="60dp"
+        android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_marginLeft="10dp"
-        android:padding="5dp"
-        />
+        android:layout_weight="1" />
 
 </LinearLayout>

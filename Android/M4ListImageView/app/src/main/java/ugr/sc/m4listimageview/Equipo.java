@@ -12,16 +12,16 @@ public class Equipo {
 
     private String nombre_equipo; // Nombre del equipo de fútbol
     private String web_equipo; // URL que contiene la web del equipo
-    private String escudo_equipo; // Nombre de la imagen del escudo
+    private int escudo_equipo; // Entero del recurso imagen del escudo
 
     /**
      * Constructor de la clase
      * @param nombre_equipo Nombre del equipo de fútbol
      * @param web_equipo Web del equipo de fútbol
-     * @param escudo_equipo Nombre del logo que representa el escudo del equipo
+     * @param escudo_equipo Logo que representa el escudo del equipo
      */
 
-    public Equipo (String nombre_equipo, String web_equipo, String escudo_equipo)
+    public Equipo (String nombre_equipo, String web_equipo, int escudo_equipo)
     {
         this.nombre_equipo = nombre_equipo;
         this.web_equipo = web_equipo;
@@ -75,19 +75,19 @@ public class Equipo {
      * @return Devuelve el nombre del archivo que representa el escudo del equipo
      */
 
-    public String getEscudo()
+    public int getEscudo()
     {
         return escudo_equipo;
     }
 
     /**
      * Método modificador
-     * @param escudo Nombre del nuevo archivo que representa el escudo del equipo
+     * @param escudo Valor del nuevo archivo que representa el escudo del equipo
      */
 
-    public void setEscudo(String escudo)
+    public void setEscudo(int escudo)
     {
-        if(!escudo_equipo.contentEquals(escudo))
+        if(escudo_equipo != escudo)
             escudo_equipo = escudo;
     }
 }

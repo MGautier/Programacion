@@ -18,27 +18,6 @@ public class MainActivity extends ActionBarActivity {
     ListView list;
     ImageListAdapter adapter;
 
-    String[] nombres = {
-            "Safari",
-            "Camera",
-            "Global",
-            "Firefox",
-            "UC Browser",
-            "Android folder",
-            "VLC Player",
-            "Cold War"
-    };
-
-    /*Integer[] imagenes = {
-            R.mipmap.pic1,
-            R.mipmap.pic2,
-            R.mipmap.pic3,
-            R.mipmap.pic4,
-            R.mipmap.pic5,
-            R.mipmap.pic6,
-            R.mipmap.pic7,
-            R.mipmap.pic8,
-    };*/
 
 
     @Override
@@ -53,12 +32,6 @@ public class MainActivity extends ActionBarActivity {
 
         list.setAdapter(adapter);
 
-        /*list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String Item_selected = nombres[+position];
-                Toast.makeText(getApplicationContext(), Item_selected, Toast.LENGTH_SHORT).show();
-            }
-        });*/
+
     }
 }

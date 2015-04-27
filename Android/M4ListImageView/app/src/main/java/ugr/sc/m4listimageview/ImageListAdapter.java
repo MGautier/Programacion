@@ -3,6 +3,7 @@ package ugr.sc.m4listimageview;
 
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,7 @@ public class ImageListAdapter<T> extends ArrayAdapter {
 
 
     private final Activity context; //Obtenemos el context del Activity
-    private final ListadoPartidos listadoPartidos; //Instancio la clase ListadoPartidos
+
 
 
     /**
@@ -32,7 +33,7 @@ public class ImageListAdapter<T> extends ArrayAdapter {
         super(context, R.layout.listimageview, object);
 
         this.context = context;
-        this.listadoPartidos = (ListadoPartidos) object;
+        ListadoPartidos.partidos = object;
 
     }
 
@@ -58,31 +59,40 @@ public class ImageListAdapter<T> extends ArrayAdapter {
         TextView television = (TextView) rowView.findViewById(R.id.tipo_visualizacion);
         ImageView escudo_visitante = (ImageView) rowView.findViewById(R.id.visitante);
 
-        //Iterator<Partido> iterator = listadoPartidos.partidos.iterator();
-        Partido jugando = listadoPartidos.getPartido(position);
+
+        Partido jugando = ListadoPartidos.getPartido(position);
 
         if(jugando != null)
         {
-            escudo_local.setImageDrawable(Drawable.createFromPath(jugando.getEquipoLocal().getEscudo() + ".png"));
+            if(Build.VERSION.SDK_INT < 22)
+            {
+                escudo_local.setImageDrawable(context.getResources().getDrawable(jugando.getEquipoLocal().getEscudo()));
+            }
+            else
+            {
+                escudo_local.setImageDrawable(context.getDrawable(jugando.getEquipoLocal().getEscudo()));
+            }
+
+
             equipo_local.setText(jugando.getEquipoLocal().getEquipo());
             hora.setText(jugando.getHora());
 
             equipo_visitante.setText(jugando.getEquipoVisitante().getEquipo());
             television.setText(jugando.getTelevision());
-            escudo_visitante.setImageDrawable(Drawable.createFromPath(jugando.getEquipoVisitante().getEscudo() + ".png"));
+
+            if(Build.VERSION.SDK_INT < 22)
+            {
+                escudo_visitante.setImageDrawable(context.getResources().getDrawable(jugando.getEquipoVisitante().getEscudo()));
+            }
+            else
+            {
+                escudo_visitante.setImageDrawable(context.getDrawable(jugando.getEquipoVisitante().getEscudo()));
+            }
+
+
         }
 
-        //listadoPartidos.getPartido(position);
-        /*while (iterator.hasNext())
-        {
-            escudo_local.setImageDrawable(Drawable.createFromPath(iterator.next().getEquipoLocal().getEscudo() + ".png"));
-            equipo_local.setText(iterator.next().getEquipoLocal().getEquipo());
-            hora.setText(iterator.next().getHora());
 
-            equipo_visitante.setText(iterator.next().getEquipoVisitante().getEquipo());
-            television.setText(iterator.next().getTelevision());
-            escudo_visitante.setImageDrawable(Drawable.createFromPath(iterator.next().getEquipoVisitante().getEscudo() + ".png"));
-        }*/
 
         return rowView;
     };
