@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_info_drag">Detector de Gestos.\n\nModo: SCROLL\n\nMueve la vista con el dedo.\nPulsación larga cambia el modo a SWIPE.\nDoble tap para centrar vista.</string>
+    <string name="app_name">Detector de Gestos</string>
+	<string name="app_info_flip">Detector de Gestos.\n\nModo: FLIP\n\nDesliza a la izquierda, derecha, arriba o abajo para cambiar la vista\nPulsación larga cambia el modo a SCROLL</string>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="app_name">Detector Letras</string>
+
+<string name="app_info">Ejemplo de uso de Android Gestures. Cuando dibujamos un gesto, los gestos reconocidos se muestran debajo. Pulsa el botón para una lista de gestos</string>
+<string name="button_gestures_label">Lista de Gestos</string>
+<string name="gesture_list">Lista de Gestos</string>
+</resources>
