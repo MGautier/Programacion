@@ -157,7 +157,7 @@ public class MultitouchView extends View {
 		// Elimina la lista anterior
 		touchPoints.clear();
 		int pointerIndex = 0;
-        int number_points = event.getPointerCount();
+        int number_points = event.getPointerCount(); // Tomo el numero de pulsaciones una sola vez y la almaceno en una variable fuera del bucle
 		for(int index=0; index < number_points; ++index)
 		{
 			// Obtiene la lista de puntos pulsados del MotionEvent
