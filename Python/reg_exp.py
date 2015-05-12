@@ -62,3 +62,7 @@ print mo.group()
 mo = re.match("http://(.+)\es", "http://ugr.es")
 print mo.group(0)
 print mo.group(1)
+
+mo = re.match("http://(.+)(.{3})", "http://ugr.es")
+
+print mo.groups()
