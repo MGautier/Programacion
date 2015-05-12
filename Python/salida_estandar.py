@@ -27,3 +27,15 @@ print "Cuesta", 3, "euros"
 
 print "Hola %s" % "mundo"
 print "%s %s" % ("Hola", "mundo")
+
+print "%10s mundo" % "Hola" #Numero de caracteres de esa cadena parametro
+print "%-10s mundo" % "Hola" #Numero de caracteres de esa cadena
+# en este caso al ser de 4 establecera una separacion de 6 caracteres
+# a mundo
+
+
+from math import pi
+
+print "%.4f" % pi # el .4f especifica el numero de decimales
+
+print "%.4s" % "hola mundo" #especifica el tam maximo de la cadena parametro
