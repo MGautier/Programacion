@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import urllib, urllib2
+import urllib, urllib2, cookielib
 from urllib2 import HTTPBasicAuthHandler
 
 try:
@@ -50,12 +50,54 @@ print f.read()
 # OpenerDirector (opener), que sera el que se utilice a partir de ese
 # momento al llamar a urlopen
 
-HTTPBasicAuthHandler:
 
-    aut_h = urllib2.HTTPBasicAuthHandler()
-    aut_h.add_password("realm", "host", "usuario", "password")
+aut_h = urllib2.HTTPBasicAuthHandler()
+aut_h.add_password("realm", "host", "usuario", "password")
 
-    opener = urllib2.build_opener(aut_h)
-    urllib2.install_opener(opener)
+opener = urllib2.build_opener(aut_h)
+urllib2.install_opener(opener)
 
-    f = urllib2.urlopen("http://www.python.org")
+f = urllib2.urlopen("http://www.python.org")
+
+
+# Si quisieramos especificar un proxy en el codigo tendriamos que
+# utilizar un opener que contuviera el manejador ProxyHandler
+
+proxy_h = urllib2.ProxyHandler({"http" : "http://miproxy.net:123"})
+
+opener = urllib2.build_opener(proxy_h)
+
+urllib2.install_opener(opener)
+
+#f = urllib2.urlopen("http://www.python.org")
+
+# Para que se guarden las cookies que manda HTTP utilizamos el manejador
+# HTTPCookieProcessor
+
+cookie_h = urllib2.HTTPCookieProcessor()
+
+opener = urllib2.build_opener(cookie_h)
+
+urllib2.install_opener(opener)
+
+f = urllib2.urlopen("http://www.python.org")
+
+# Si queremos acceder a estas cookies o poder mandar nuestras propias
+# cookies, podemos pasarle como parametro al inicializador de
+# HTTPCookiProcessor un objeto de tipo CookiJar del modulo cookielib
+
+# Para leer las cookies mandadas basta con crear un objeto iterabe a partir
+# del CookieJar
+
+cookie_j = cookielib.CookieJar()
+
+cookie_h = urllib2.HTTPCookieProcessor(cookie_j)
+
+opener = urllib2.build_opener(cookie_h)
+
+opener.open("http://www.python.org")
+
+for num, cookie in enumerate(cookie_j):
+    print num, cookie.name
+    print cookie.value
+    print
