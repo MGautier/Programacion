@@ -1,0 +1,56 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikz{1}{Grafo de Peterson}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=4mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+
+    \node [place] (c1) {};
+
+    \node [place] (c2) [right of=c1,xshift=1.5cm,yshift=2cm] {};
+
+    \node [place] (c3) [right of=c1,xshift=4cm] {}
+    edge [] (c1);
+
+    \node [place] (c4) [right of=c1,yshift=-3.5cm,xshift=-.5cm] {}
+    edge [] (c2)
+    edge [] (c3);
+
+
+    \node [place] (c5) [left of=c3,yshift=-3.5cm,xshift=.5cm] {}
+    edge [] (c1)
+    edge [] (c2);
+
+    \node [place] (c6) [above of=c2,yshift=.5cm] {}
+    edge [] (c2);
+
+    \node [place] (c7) [below of=c4,yshift=-.2cm,xshift=-1.2cm] {}
+    edge [] (c4);
+
+    \node [place] (c8) [left of=c1,yshift=.5cm,xshift=-1.2cm] {}
+    edge [] (c1)
+    edge [] (c7)
+    edge [] (c6);
+
+    \node [place] (c9) [below of=c5,yshift=-.2cm,xshift=1.2cm] {}
+    edge [] (c7)
+    edge [] (c5);
+
+    \node [place] (c10) [right of=c3,yshift=.5cm,xshift=1.2cm] {}
+    edge [] (c6)
+    edge [] (c9)
+    edge [] (c3);
+
+
+\end{scope}
+
+}
+\end{document}

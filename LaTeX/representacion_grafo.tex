@@ -1,0 +1,40 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\figuratikz{1}{Representación gráfica de un grafo}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=6mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    \node [place] (c1) {$v_1$};
+
+    \node [place] (c2) [above of=c1,xshift=-2.75cm,yshift=1.75cm] {$v_2$};
+
+    \node [place] (c3) [left of=c2,xshift=-1.4cm] {$v_3$};
+
+    \node [place] (c5) [left of=c1,xshift=-2cm] {$v_5$};
+
+    \node [place] (c4) [left of=c5,xshift=-2cm] {$v_4$};
+
+    %en la sentencia draw junto a su formato controls tenemos dos parámetros
+    % antes del "and" y después de este. El segundo (x:estecm) tira la flecha hacia la derecha y el primero la tira hacia abajo
+
+    \draw (c1) .. controls +(-150:2cm) and +(10:1cm) .. (c2);
+    \draw (c2) .. controls +(-150:2cm) and +(40:1cm) .. (c5);
+    \draw (c3) .. controls +(-80:-1cm) and +(5:-1cm) .. (c2);
+    \draw (c3) .. controls +(-10:1cm) and +(-150:2cm) .. (c5);
+    \draw (c3) .. controls +(10:-2cm) and +(10:2cm) .. (c4);
+
+
+  \end{scope}
+
+}
+
+\end{document}

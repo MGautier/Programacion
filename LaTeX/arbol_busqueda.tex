@@ -1,0 +1,61 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikz{1}{Un árbol de búsqueda en anchura. Los nodos son numerados en el orden en que serán procesados por el algoritmo. El hijo de un nodo se visita de izquierda a derecha.}
+{
+  \tikzstyle{place}=[circle,thick,draw=green!20,fill=blue!20,minimum size=6mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    \node [place] (c1) {$2$};
+
+    \node [texto] (c2) [right of=c1,xshift=2.5cm] {};
+
+    \node [place] (c3) [above of=c2,yshift=1.5cm] {$1$}
+    edge [] (c1);
+
+    \node [place] (c4) [below of=c1,yshift=-.5cm] {$6$}
+    edge [] (c1);
+
+    \node [place] (c6) [right of=c2,xshift=2.5cm] {$4$}
+    edge [] (c3);
+
+    \node [place] (c7) [below of=c6,yshift=-.5cm] {$11$}
+    edge [] (c6);
+
+    \node [place] (c10) [below of=c3,yshift=-1.5cm] {$3$}
+    edge [] (c3);
+
+    \node [place] (c11) [below of=c10,xshift=-.75cm,yshift=-.5cm] {$8$}
+    edge [] (c10);
+
+    \node [place] (c12) [below of=c10,xshift=.75cm,yshift=-.5cm] {$9$}
+    edge [] (c10);
+
+    \node [place] (c13) [left of=c4,xshift=-.25cm] {$5$}
+    edge [] (c1);
+
+    \node [place] (c14) [right of=c4,xshift=.25cm] {$7$}
+    edge [] (c1);
+
+    \node [place] (c15) [below of=c4,xshift=-.75cm,yshift=-.5cm] {$13$}
+    edge [] (c4);
+
+    \node [place] (c16) [below of=c4,xshift=.75cm,yshift=-.5cm] {$14$}
+    edge [] (c4);
+
+    \node [place] (c17) [below of=c7,xshift=-.75cm,yshift=-.5cm] {$15$}
+    edge [] (c7);
+
+    \node [place] (c17) [below of=c7,xshift=.75cm,yshift=-.5cm] {$16$}
+    edge [] (c7);
+
+  \end{scope}
+
+}
+\end{document}

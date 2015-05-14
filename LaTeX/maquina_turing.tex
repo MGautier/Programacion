@@ -1,0 +1,58 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikz{1}{Una máquina de Turing.}
+{
+  \tikzstyle{texto}=[]
+
+  \draw (1,1) +(-.5,-.5) rectangle ++(.5,.5);
+  \draw (1,1) node{$\cdots$};
+
+  \draw (2,1) +(-.5,-.5) rectangle ++(.5,.5);
+  \draw (2,1) node{$B$};
+
+  \draw (3,1) +(-.5,-.5) rectangle ++(.5,.5);
+  \draw (3,1) node{$B$};
+
+  \draw (4,1) +(-.5,-.5) rectangle ++(.5,.5);
+  \draw (4,1) node{$X_1$};
+
+  \draw (5,1) +(-.5,-.5) rectangle ++(.5,.5);
+  \draw (5,1) node{$X_2$};
+
+  \draw (6,1) +(-.5,-.5) rectangle ++(2.5,.5);
+
+  \draw (9,1) +(-.5,-.5) rectangle ++(.5,.5);
+  \draw (9,1) node (d1) {$X_i$};
+
+  \draw (10,1) +(-.5,-.5) rectangle ++(1.5,.5);
+
+  \draw (12,1) +(-.5,-.5) rectangle ++(.5,.5);
+  \draw (12,1) node{$X_n$};
+
+  \draw (13,1) +(-.5,-.5) rectangle ++(.5,.5);
+  \draw (13,1) node{$B$};
+
+  \draw (14,1) +(-.5,-.5) rectangle ++(.5,.5);
+  \draw (14,1) node{$B$};
+
+  \draw (15,1) +(-.5,-.5) rectangle ++(.5,.5);
+  \draw (15,1) node{$\cdots$};
+
+  \draw[ultra thick,white] (16,1) +(0,-.5) rectangle ++(-.5,.5);
+  \draw[ultra thick,white] (0,1) +(0,-.5) rectangle ++(.5,.5);
+
+  \draw (8,3) +(0,0) rectangle ++(2,2);
+
+  \node [texto] (t1) [above of=d1,yshift=2cm] {de};
+  \node [texto] (t2) [above of=t1,yshift=-.5cm] {Unidad};
+  \node [texto] (t3) [below of=t1,yshift=.5cm] {Control};
+
+  \draw[post] (8.75,3)   .. controls +(50:-2cm) and +(-100:-1cm) .. (9,1.5);
+
+}
+\end{document}

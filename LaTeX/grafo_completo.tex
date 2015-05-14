@@ -1,0 +1,77 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\figuratikz{1}{Grafo completo}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=6mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    \node [place] (c1) [label=below:\textcolor{black}{$K_1$}] {};
+
+    \node [place] (c2) [right of=c1, xshift=.2cm, label=below:\textcolor{black}{$K_2$}] {};
+
+    \node [place] (c3) [above of=c2, yshift=.5cm] {}
+    edge [] (c2);
+
+    \node [place] (c4) [right of=c2,xshift=.3cm] {};
+
+    \node [place] (c5) [right of=c4,xshift=.5cm] {}
+    edge [] (c4);
+
+    \node [place] (c6) [below of=c4,xshift=.8cm,yshift=3.1cm] {}
+    edge [] (c4)
+    edge [] (c5);
+
+\node [texto] (t1) [below of=c4,xshift=.8cm,yshift=1.1cm,label=below:\textcolor{black}{$K_3$}] {};
+
+    \node [place] (c7) [right of=c5,xshift=.5cm] {};
+
+    \node [place] (c8) [above of=c7,yshift=.5cm] {}
+    edge [] (c7);
+
+    \node [place] (c9) [right of=c8,xshift=.5cm] {}
+    edge [] (c8)
+    edge [] (c7);
+
+    \node [place] (c10) [right of=c7,xshift=.5cm] {}
+    edge [] (c9)
+    edge [] (c7)
+    edge [] (c8);
+
+    \node [texto] (t2) [right of=c7,xshift=-.2cm,label=below:\textcolor{black}{$K_4$}] {};
+
+
+    \node [place] (c11) [right of=c10,xshift=.3cm] {};
+
+    \node [place] (c12) [right of=c11,xshift=.5cm] {}
+    edge [] (c11);
+
+    \node [place] (c13) [below of=c11,xshift=.7cm,yshift=3cm] {}
+    edge [] (c11)
+    edge [] (c12);
+
+    \node [place] (c14) [above of=c11,xshift=-.4cm] {}
+    edge [] (c11)
+    edge [] (c12)
+    edge [] (c13);
+
+    \node [place] (c15) [above of=c12,xshift=.4cm] {}
+    edge [] (c11)
+    edge [] (c12)
+    edge [] (c13)
+    edge [] (c14);
+
+    \node [texto] (t3) [below of=c11,xshift=.8cm,yshift=1.1cm,label=below:\textcolor{black}{$K_5$}] {};
+
+  \end{scope}
+
+}
+
+\end{document}

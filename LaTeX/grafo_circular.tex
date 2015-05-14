@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\figuratikz{1}{Grafo circular}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=6mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    \node [place] (c1)                   {};
+
+    \node [place] (c2) [right of=c1,yshift=1.5cm] {}
+    edge []                            (c1);
+
+    \node [place] (c3) [right of=c2,yshift=-1.5cm] {}
+    edge [] (c2)
+    edge [] (c1);
+
+    \node [texto] (t1) [below of=c2,yshift=-1.4cm,label=above:\textcolor{black}{$C_3$}] {};
+
+    \node[place] (c4) [right of=c3] {};
+
+    \node[place] (c5) [above of=c4,yshift=.5cm] {}
+    edge [] (c4);
+
+    \node[place] (c6) [right of=c5,xshift=.7cm] {}
+    edge [] (c5);
+
+    \node[place] (c7) [right of=c4,xshift=.7cm] {}
+    edge [] (c4)
+    edge [] (c6);
+
+    \node[texto] (t2) [below of=c4,label=above:\textcolor{black}{$C_4$},yshift=.1cm,xshift=.9cm] {};
+
+    \node[place] (c8) [right of=c6,xshift=.3cm] {};
+
+    \node[place] (c11) [right of=c7,xshift=1cm] {}
+    edge [] (c8);
+
+    \node[place] (c9) [above of=c11,xshift=.65cm,yshift=1.2cm] {}
+    edge [] (c8);
+
+    \node[place] (c12) [right of=c11,xshift=.4cm] {}
+    edge [] (c11);
+
+    \node[place] (c10) [above of=c12,yshift=.5cm,xshift=.6cm] {}
+    edge [] (c12)
+    edge [] (c9);
+
+    \node[texto] (t3) [below of=c11,yshift=.1cm,xshift=.8cm,label=above:\textcolor{black}{$C_5$}] {};
+\end{scope}
+}
+
+\end{document}

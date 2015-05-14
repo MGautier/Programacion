@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}%
+\begin{figure}[H]%
+\begin{minipage}[H]{1\columnwidth}%
+\centering%
+\begin{tikzpicture}{node distance=1.3cm,>=stealth',bend angle=45, auto}
+    \matrix [matrix of nodes]
+    {
+      \node[minimum height=.85cm,draw,tokens=1,yshift=.135cm,label=left:\textcolor{black}{$0$}] (c1) {\ \ \ \ \ \ };&[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (c2) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (c3) {\ $6$\ };  &[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (c4) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (c5) {\ $5$\ }; & [1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (c6) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (c7) {\ $1$\ }; & [1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (c8) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (c9) {\ 2\ };\\
+      \node[minimum height=.85cm,draw,tokens=1,yshift=.135cm,label=left:\textcolor{black}{$1$}] (d1) {\ \ \ \ \ \ };&[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (d2) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (d3) {\ $0$\ };   \\
+      \node[minimum height=.85cm,draw,tokens=1,yshift=.135cm,label=left:\textcolor{black}{$2$}] (e1) {\ \ \ \ \ \ };&[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (e2) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (e3) {\ $0$\ };   \\
+      \node[minimum height=.85cm,draw,tokens=1,yshift=.135cm,label=left:\textcolor{black}{$3$}] (f1) {\ \ \ \ \ \ }; &[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (f2) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (f3) {\ $5$ \ }; &[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (f4) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (f5) {\ $4$\ };  \\
+      \node[minimum height=.85cm,draw,tokens=1,yshift=.135cm,label=left:\textcolor{black}{$4$}] (g1) {\ \ \ \ \ \ }; &[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (g2) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (g3) {\ $6$\ }; &[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (g4) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (g5) {\ $5$ \ }; &[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (g6) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (g7) {\ $3$ \ };  \\
+      \node[minimum height=.85cm,draw,tokens=1,yshift=.135cm,label=left:\textcolor{black}{$5$}] (h1) {\ \ \ \ \ \ }; &[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (h2) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (h3) {\ $3$ \ }; &[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (h4) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (h5) {\ $0$ \ }; &[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (h6) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (h7) {\ $4$ \ };  \\
+      \node[minimum height=.85cm,draw,tokens=1,yshift=.135cm,label=left:\textcolor{black}{$6$}] (i1) {\ \ \ \ \ \ }; &[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (i2) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (i3) {\ $0$\ }; &[1cm] \node[minimum height=.7375cm, minimum width=.75cm,draw,yshift=.135cm] (i4) {\ \ \ }; & \node[minimum height=.75cm, minimum width=.75cm,draw] (i5) {\ $4$\ };  \\
+    };
+
+    \draw (c1) to [post] (c2);
+    \draw (c3) to [post] (c4);
+    \draw (c5) to [post] (c6);
+    \draw (c7) to [post] (c8);
+    \draw (d1) to [post] (d2);
+    \draw (e1) to [post] (e2);
+    \draw (f1) to [post] (f2);
+    \draw (f3) to [post] (f4);
+    \draw (g1) to [post] (g2);
+    \draw (g3) to [post] (g4);
+    \draw (g5) to [post] (g6);
+    \draw (h1) to [post] (h2);
+    \draw (h3) to [post] (h4);
+    \draw (h5) to [post] (h6);
+    \draw (i1) to [post] (i2);
+    \draw (i3) to [post] (i4);
+
+\end{tikzpicture}
+\caption{Listas de adyacencia}%
+\end{minipage}%
+\end{figure}%
+\end{center}%
+\end{document}

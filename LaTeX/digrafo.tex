@@ -1,0 +1,42 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\figuratikz{1}{Digrafo de 5 vértices}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=4mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    edge [post,double,decorate,decoration={triangles,pre length=1cm, post length=1cm}] node [above] {$8$} (c1);
+
+
+    \node [place] (c1) {$x_1$};
+
+    \node [place] (c2) [right of=c1,yshift=1.15cm,xshift=.5cm] {$x_2$}
+    edge [pre] (c1);
+
+    \node [place] (c3) [below of=c2,yshift=-.5cm] {$x_3$}
+    edge [pre] (c1)
+    edge [post] (c2);
+
+    \node [place] (c4) [below of=c1,xshift=.7cm,yshift=-1.5cm] {$x_4$}
+    edge [pre] (c1)
+    edge [post] (c3);
+
+
+    \node [place] (c5) [below of=c1,xshift=-1cm,yshift=-.5cm] {$x_5$}
+    edge [post] (c3)
+    edge [pre] (c1)
+    edge [post] (c4);
+
+\end{scope}
+
+}
+
+\end{document}

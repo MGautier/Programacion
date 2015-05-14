@@ -1,0 +1,42 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikz{1}{Un DAG con un solo orden topológico $(G,A,B,C,F,E,D)$}
+{
+  \tikzstyle{place}=[circle,thick,draw=green!20,fill=blue!20,minimum size=4mm]
+
+  \begin{scope}
+
+    \node [place] (c1) [label=left:\textcolor{black}{$A$}] {};
+
+    \node [place] (c2) [below of=c1,yshift=-1cm,label=left:\textcolor{black}{$G$}] {}
+    edge [post] (c1);
+
+    \node [place] (c3) [right of=c1,xshift=.5cm,yshift=.5cm,label=above:\textcolor{black}{$B$}] {}
+    edge [pre] (c1);
+
+    \node [place] (c4) [below of=c3,yshift=-.2cm,xshift=.4cm,label=below:\textcolor{black}{$C$}] {}
+    edge [pre] (c3)
+    edge [pre] (c1);
+
+    \node [place] (c5) [right of=c2,xshift=3cm,label=right:\textcolor{black}{$F$}] {}
+    edge [pre] (c2)
+    edge [pre] (c4);
+
+    \node [place] (c6) [right of=c4,xshift=1cm,yshift=.3cm,label=right:\textcolor{black}{$E$}] {}
+    edge [pre] (c4)
+    edge [pre] (c5);
+
+    \node [place] (c7) [right of=c6,xshift=.4cm,yshift=.8cm,label=above:\textcolor{black}{$D$}] {}
+    edge [pre] (c3)
+    edge [pre] (c6);
+
+
+  \end{scope}
+
+}
+\end{document}

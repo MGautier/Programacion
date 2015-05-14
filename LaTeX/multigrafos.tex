@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\figuratikz{1}{Multigrafo de 6 vértices}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=6mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    \node [place] (c1) {$v_1$};
+
+    \node [place] (c2) [above of=c1,xshift=2.75cm,yshift=.75cm] {$v_2$};
+
+    \node [place] (c3) [below of=c2,yshift=-1.5cm,xshift=-.4cm] {$v_3$}
+    edge [] (c2)
+    edge [] (c1);
+
+    \node [place] (c4) [below of=c3,yshift=-.5cm,xshift=.2cm] {$v_4$};
+
+    \node [place] (c5) [below of=c1,yshift=-2cm,xshift=.2cm] {$v_5$}
+    edge [] (c1)
+    edge [] (c4);
+
+    \node [place] (c6) [left of=c1,yshift=-1cm,xshift=-.5cm] {$v_6$}
+    edge [] (c5)
+    edge [] (c1)
+    edge [] (c3);
+
+
+    \draw (c1) .. controls +(-50:2cm) and +(80:1cm) .. (c5);
+
+    \draw (c2) .. controls +(-1:2cm) and +(20:1cm) .. (c4);
+    \draw (c2) .. controls +(-50:2cm) and +(80:1cm) .. (c4);
+
+
+  \end{scope}
+
+}
+
+\end{document}

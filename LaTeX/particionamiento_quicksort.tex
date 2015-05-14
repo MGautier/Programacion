@@ -1,0 +1,60 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikz{1}{Particionamiento en Quicksort}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=5mm]
+  \tikzstyle{texto}=[minimum size=5mm]
+  \tikzstyle{process}=[circle,thick,draw=blue!20,fill=red!20,minimum size=5mm]
+
+    \matrix [matrix of nodes]
+    {
+      \node[texto] (d1) {A S O R T I N G E X A M P L\ \ \ }; \\
+      \node[texto] (d2) [below of=d1,yshift=1cm,xshift=-2.35cm] {A S};\\
+    };
+
+
+\draw  node[right of=d1,draw,circle,xshift=1.7cm] (r2) {E};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=4.7cm,draw,right of=d2,xshift=1.75cm] (d3) {};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=3.5cm,draw,below of=d3,xshift=-1.3cm,yshift=.5cm] (d4) {};
+\draw  node[right of=d4,xshift=1.75cm] (d5) {A M P L E};
+\draw  node[below of=d4,yshift=.5cm,xshift=-1.6cm] (d6) {A};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=2.75cm,draw,right of=d6,xshift=1cm] (d7) {};
+\draw  node[right of=d6,xshift=-.65cm] (r1) {};
+\draw  node[right of=d7,xshift=.6cm] (d8) {};
+\draw  node[right of=d8,xshift=-.06cm] (d9) {M P L E};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=.6cm,draw,below of=d4,xshift=-1.4cm] (d10) {};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=4.25cm,draw,right of=d10,xshift=1.92cm] (d11) {};
+\draw  node[right of=d10,xshift=-.45cm] (r3) {};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=2.8cm,draw,below of=d10,yshift=.5cm,xshift=1.1cm] (d12) {};
+\draw  node[right of=d12,xshift=.81cm] (d13) {E X};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=1.75cm,draw,right of=d13,xshift=.25cm] (d14) {};
+\draw  node[below of=d10] (d15) {A A};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=1.75cm,draw,right of=d15,xshift=.625cm] (d16) {};
+\draw  node[right of=d15,xshift=-.45cm] (r4) {};
+\draw  node[right of=d16,xshift=.1cm] (d17) {};
+\draw  node[right of=d17,xshift=.3cm] (d18) {X S M P L E};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=1cm,draw,below of=d10,yshift=-.5cm,xshift=.2cm] (d19) {};
+\draw  node[right of=d19,xshift=-.25cm] (d20) {};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=3.8cm,draw,right of=d20,xshift=1.2cm] (d21) {};
+\draw  node[right of=d19,xshift=-.25cm,draw,circle] (a1) {R};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=.6cm,draw,below of=d19,yshift=.5cm,xshift=-.18cm] (d22) {};
+\draw  node[right of=d22,xshift=.4cm] (d23) {E R T I N G};
+\draw  node[fill=gray!30,minimum height=.35cm,minimum width=2.55cm,draw,right of=d23,xshift=1.35cm] (d24) {};
+\draw  node[below of=d22,yshift=.5cm,xshift=.15cm] (d25) {A A E};
+\draw  node[right of=d25,draw,circle,xshift=-.3cm] (r5) {E};
+\draw  node[right of=r5,yshift=.5cm,yshift=-.5cm,xshift=1.25cm] (d26) {T I N G O X S M P L R};
+
+
+\draw  node[right of=d6,draw,circle,xshift=-.65cm] (a2) {A};
+\draw  node[right of=d7,xshift=.6cm,draw,circle] (a3) {S};
+\draw  node[right of=d10,draw,circle,xshift=-.45cm] (a4) {O};
+\draw  node[right of=d15,draw,circle,xshift=-.45cm] (a5) {E};
+\draw  node[right of=d16,draw,circle,xshift=.1cm] (a6) {O};
+
+}
+\end{document}

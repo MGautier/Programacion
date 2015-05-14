@@ -1,0 +1,48 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikzno{1}{}{}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=6mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    \node [place] (c1) {$v_6$};
+
+    \node [place] (c2) [right of=c1,xshift=1cm,yshift=2.5cm] {$v_5$}
+    edge [] (c1);
+
+    \node [place] (c3) [right of=c1,xshift=1cm,yshift=-2.5cm] {$v_7$}
+    edge [] (c1)
+    edge [] (c2);
+
+    \node [place] (c4) [right of=c2,xshift=2cm] {$v_4$}
+    edge [] (c2);
+
+    \node [place] (c5) [right of=c3,xshift=2cm] {$v_8$}
+    edge [] (c4);
+
+    \node [place] (c6) [right of=c1,xshift=6cm] {$v_3$}
+    edge [] (c4)
+    edge [] (c5);
+
+    \node [place] (c7) [right of=c4,xshift=2.5cm] {$v_2$}
+    edge [] (c6);
+
+    \node [place] (c8) [right of=c5,xshift=2.5cm] {$v_9$}
+    edge [] (c6);
+
+    \node [place] (c9) [right of=c6,xshift=1.75cm] {$v_1$}
+    edge [] (c7)
+    edge [] (c8);
+
+    \node [texto] (t1) [below of=c5,yshift=.2cm] {$G$};
+\end{scope}
+
+}
+\end{document}

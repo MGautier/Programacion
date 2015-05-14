@@ -1,0 +1,28 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikz{1}{Relación entre las clases P y NP}
+{
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    \node [texto] (c1) [] {};
+
+    \node (a1) [below of=c1,inner sep=0pt,minimum width=3cm, minimum height=5cm,thick,draw,ellipse] {$NP$};
+
+    \node [minimum size=.75cm,thick,draw,circle] (c2) [left of=c1,xshift=.5cm,yshift=.3cm] {};
+
+    \node [texto] (t1) [above of=c2,yshift=1cm,xshift=-.5cm] {Problemas NP-completos};
+    \draw[post,thick] (t1)   .. controls +(50:-2cm) and +(-100:-1cm) .. (c2);
+
+    \node [minimum size=1.5cm,thick,draw,circle] (c3) [below of=a1,yshift=-.3cm] {$P$};
+
+  \end{scope}
+
+}
+\end{document}

@@ -1,0 +1,123 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikz{1}{La ejecución del algoritmo de Bellman-Ford.}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=8mm]
+  \tikzstyle{texto}=[]
+  \tikzstyle{process}=[circle,thick,draw=blue!20,fill=red!20,minimum size=8mm]
+
+  \begin{scope}
+
+
+    \node [place] (c1) {$\infty$};
+
+    \node [process] (c2) [right of=c1,xshift=.5cm,yshift=2cm] {$0$}
+    edge [post] node [above,xshift=-.2cm] {$7$} (c1);
+
+    \node [place] (c3) [right of=c1,xshift=2cm] {$\infty$}
+    edge [pre] node [above,xshift=.2cm] {$6$} (c2)
+    edge [post] node [above] {$8$} (c1);
+
+    \node [place] (c4) [below of=c1,yshift=-.8cm] {$\infty$}
+    edge [pre] node [below,xshift=-.2cm] {$9$} (c1)
+    edge [pre] node [left,yshift=-.5cm] {$-4$} (c3)
+    edge [post] node [above,yshift=.4cm,xshift=.5cm] {$2$} (c2);
+
+    \node [place] (c5) [below of=c3,yshift=-.8cm]  {$\infty$}
+    edge [pre] node [below] {$7$} (c4)
+    edge [pre] node [left,yshift=.5cm] {$-3$} (c1)
+    edge [pre,bend right] node [right] {$5$} (c3)
+    edge [post,bend left] node [left] {$-2$} (c3);
+
+
+    \node [process] (d1) [right of=c3,xshift=.5cm] {$7$};
+
+    \node [place] (d2) [right of=d1,xshift=.5cm,yshift=2cm] {$0$}
+    edge [post,red] node [above,xshift=-.2cm] {\textcolor{black}{$7$}} (d1);
+
+    \node [process] (d3) [right of=d1,xshift=2cm] {$6$}
+    edge [pre,red] node [above,xshift=.2cm] {\textcolor{black}{$6$}} (d2)
+    edge [post] node [above] {$8$} (d1);
+
+    \node [place] (d4) [below of=d1,yshift=-.8cm] {$\infty$}
+    edge [pre] node [below,xshift=-.2cm] {$9$} (d1)
+    edge [pre] node [left,yshift=-.5cm] {$-4$} (d3)
+    edge [post] node [above,yshift=.4cm,xshift=.5cm] {$2$} (d2);
+
+    \node [place] (d5) [below of=d3,yshift=-.8cm]  {$\infty$}
+    edge [pre] node [below] {$7$} (d4)
+    edge [pre] node [left,yshift=.5cm] {$-3$} (d1)
+    edge [pre,bend right] node [right] {$5$} (d3)
+    edge [post,bend left] node [left] {$-2$} (d3);
+
+
+    \node [place] (e1) [right of=d3,xshift=.5cm] {$7$};
+
+    \node [place] (e2) [right of=e1,xshift=.5cm,yshift=2cm] {$0$}
+    edge [post,red] node [above,xshift=-.2cm] {\textcolor{black}{$7$}} (e1);
+
+    \node [place] (e3) [right of=e1,xshift=2cm] {$6$}
+    edge [pre,red] node [above,xshift=.2cm] {\textcolor{black}{$6$}} (e2)
+    edge [post] node [above] {$8$} (e1);
+
+    \node [process] (e4) [below of=e1,yshift=-.8cm] {$2$}
+    edge [pre] node [below,xshift=-.2cm] {$9$} (e1)
+    edge [pre,red] node [left,yshift=-.5cm] {\textcolor{black}{$-4$}} (e3)
+    edge [post] node [above,yshift=.4cm,xshift=.5cm] {$2$} (e2);
+
+    \node [process] (e5) [below of=e3,yshift=-.8cm]  {$4$}
+    edge [pre] node [below] {$7$} (e4)
+    edge [pre,red] node [left,yshift=.5cm] {\textcolor{black}{$-3$}} (e1)
+    edge [pre,bend right] node [right] {$5$} (e3)
+    edge [post,bend left] node [left] {\textcolor{black}{$-2$}} (e3);
+
+    \node [place] (f1) [below of=c1,yshift=-5.5cm,xshift=2cm] {$7$};
+
+    \node [place] (f2) [right of=f1,xshift=.5cm,yshift=2cm] {$0$}
+    edge [post,red] node [above,xshift=-.2cm] {\textcolor{black}{$7$}} (f1);
+
+    \node [process] (f3) [right of=f1,xshift=2cm] {$2$}
+    edge [pre] node [above,xshift=.2cm] {$6$} (f2)
+    edge [post] node [above] {$8$} (f1);
+
+    \node [place] (f4) [below of=f1,yshift=-.8cm] {$2$}
+    edge [pre] node [below,xshift=-.2cm] {$9$} (f1)
+    edge [pre,red] node [left,yshift=-.5cm] {\textcolor{black}{$-4$}} (f3)
+    edge [post] node [above,yshift=.4cm,xshift=.5cm] {$2$} (f2);
+
+    \node [place] (f5) [below of=f3,yshift=-.8cm]  {$4$}
+    edge [pre] node [below] {$7$} (f4)
+    edge [pre,red] node [left,yshift=.5cm] {\textcolor{black}{$-3$}} (f1)
+    edge [pre,bend right] node [right] {$5$} (f3)
+    edge [post,bend left,red] node [left] {\textcolor{black}{$-2$}} (f3);
+
+
+    \node [place] (g1) [below of=d3,yshift=-5.5cm,xshift=-.8cm] {$7$};
+
+    \node [place] (g2) [right of=g1,xshift=.5cm,yshift=2cm] {$0$}
+    edge [post,red] node [above,xshift=-.2cm] {\textcolor{black}{$7$}} (g1);
+
+    \node [place] (g3) [right of=g1,xshift=2cm] {$2$}
+    edge [pre] node [above,xshift=.2cm] {$6$} (g2)
+    edge [post] node [above] {$8$} (g1);
+
+    \node [process] (g4) [below of=g1,yshift=-.8cm] {$-2$}
+    edge [pre] node [below,xshift=-.2cm] {$9$} (g1)
+    edge [pre,red] node [left,yshift=-.5cm] {\textcolor{black}{$-4$}} (g3)
+    edge [post] node [above,yshift=.4cm,xshift=.5cm] {$2$} (g2);
+
+    \node [place] (g5) [below of=g3,yshift=-.8cm]  {$4$}
+    edge [pre] node [below] {$7$} (g4)
+    edge [pre,red] node [left,yshift=.5cm] {\textcolor{black}{$-3$}} (g1)
+    edge [pre,bend right] node [right] {$5$} (g3)
+    edge [post,bend left,red] node [left] {\textcolor{black}{$-2$}} (g3);
+
+\end{scope}
+
+}
+\end{document}

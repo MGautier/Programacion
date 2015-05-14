@@ -1,0 +1,28 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikzno{1}{}{}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=5mm]
+  \tikzstyle{texto}=[]
+  \tikzstyle{process}=[circle,thick,draw=blue!20,fill=red!20,minimum size=5mm]
+
+  \begin{scope}
+
+    \node [place] (c1) {$i$};
+
+    \node [place] (c2) [right of=c1, yshift=2cm,xshift=.25cm] {$k$};
+
+    \node [place] (c3) [right of=c1, xshift=1.7cm] {$j$};
+
+    \draw[blue,post,decorate,decoration={coil,aspect=0}] (c1) node [above,yshift=.7cm,xshift=-.5cm] {\textcolor{blue!70}{$M_{k-1}[i,k]$}} to (c2);
+    \draw[blue,pre,decorate,decoration={coil,aspect=0}] (c3) node [above,yshift=.7cm,xshift=.5cm] {\textcolor{blue!70}{$M_{k-1}[k,j]$}}to (c2);
+    \draw[blue,pre,decorate,decoration={coil,aspect=0}] (c3) node [below,yshift=-.3cm,xshift=-1.5cm] {\textcolor{blue!70}{$M_{k-1}[i,j]$}} to (c1);
+
+\end{scope}
+}
+\end{document}

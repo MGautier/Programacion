@@ -1,0 +1,47 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\figuratikz{1}{Grafo de ejemplo}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=6mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    \node [place] (c1) {$v_4$};
+
+    \node [place] (c2) [right of=c1,xshift=1.5cm,yshift=3cm] {$v_3$}
+    edge [] (c1);
+
+    \node [place] (c3) [right of=c1,xshift=1.5cm,yshift=-3cm] {$v_5$}
+    edge [] (c1)
+    edge [] (c2);
+
+    \node [place] (c4) [right of=c2,xshift=3cm] {$v_2$}
+    edge [] (c1)
+    edge [] (c2)
+    edge [] (c3);
+
+    \node [place] (c5) [right of=c3,xshift=3cm] {$v_6$}
+    edge [] (c1)
+    edge [] (c2)
+    edge [] (c3)
+    edge [] (c4);
+
+    \node [place] (c6) [above of=c5,yshift=2cm,xshift=2.75cm] {$v_1$}
+    edge [] (c1)
+    edge [] (c2)
+    edge [] (c3)
+    edge [] (c4)
+    edge [] (c5);
+
+\end{scope}
+
+}
+
+\end{document}

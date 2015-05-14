@@ -1,0 +1,111 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikz{1}{Un grafo dirigido ponderado y los pasos que realiza el algoritmo de Dijkstra en el grafo. En cada paso se colorean los nuevos vértices y las nuevas aristas procesadas.}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=5mm]
+  \tikzstyle{texto}=[]
+  \tikzstyle{process}=[circle,thick,draw=blue!20,fill=red!20,minimum size=5mm]
+
+  \begin{scope}
+
+
+    \node [place] (c1) {$v_5$};
+
+    \node [process] (c2) [right of=c1,xshift=.5cm,yshift=2cm] {$v_1$}
+    edge [post] node [above,xshift=-.2cm] {$1$} (c1);
+
+    \node [place] (c3) [right of=c1,xshift=2cm] {$v_2$}
+    edge [pre] node [above,xshift=.2cm] {$7$} (c2);
+
+    \node [place] (c4) [below of=c1,xshift=.4cm,yshift=-.6cm] {$v_4$}
+    edge [pre] node [below,yshift=.2cm,xshift=-.3cm] {$1$} (c1)
+    edge [pre] node [above,xshift=.3cm] {$6$} (c2)
+    edge [post]  node [above] {$3$} (c3);
+
+    \node [place] (c5) [below of=c3,xshift=-.4cm,yshift=-.6cm]  {$v_3$}
+    edge [pre] node [above,xshift=-.3cm] {$4$} (c2)
+    edge [post] node [below] {$5$} (c4)
+    edge [post] node [below,yshift=.1cm,xshift=.3cm] {$2$} (c3) ;
+
+    \node [process] (d1) [right of=c3,xshift=.2cm] {$v_5$};
+
+    \node [process] (d2) [right of=d1,xshift=.5cm,yshift=2cm] {$v_1$}
+    edge [red,post] node [above,xshift=-.2cm] {\textcolor{black}{$1$}} (d1);
+
+    \node [place] (d3) [right of=d1,xshift=2cm] {$v_2$}
+    edge [pre] node [above,xshift=.2cm] {$7$} (d2);
+
+    \node [place] (d4) [below of=d1,xshift=.4cm,yshift=-.6cm] {$v_4$}
+    edge [pre] node [below,yshift=.2cm,xshift=-.3cm] {$1$} (d1)
+    edge [pre] node [above,xshift=.3cm] {$6$} (d2)
+    edge [post]  node [above] {$3$} (d3);
+
+    \node [place] (d5) [below of=d3,xshift=-.4cm,yshift=-.6cm]  {$v_3$}
+    edge [pre] node [above,xshift=-.3cm] {$4$} (d2)
+    edge [post] node [below] {$5$} (d4)
+    edge [post] node [below,yshift=.1cm,xshift=.3cm] {$2$} (d3) ;
+
+
+    \node [process] (e1) [right of=d3,xshift=.2cm] {$v_5$};
+
+    \node [process] (e2) [right of=e1,xshift=.5cm,yshift=2cm] {$v_1$}
+    edge [red,post] node [above,xshift=-.2cm] {\textcolor{black}{$1$}} (e1);
+
+    \node [place] (e3) [right of=e1,xshift=2cm] {$v_2$}
+    edge [pre] node [above,xshift=.2cm] {$7$} (e2);
+
+    \node [process] (e4) [below of=e1,xshift=.4cm,yshift=-.6cm] {$v_4$}
+    edge [red,pre] node [below,yshift=.2cm,xshift=-.3cm] {\textcolor{black}{$1$}} (e1)
+    edge [pre] node [above,xshift=.3cm] {$6$} (e2)
+    edge [post]  node [above] {$3$} (e3);
+
+    \node [place] (e5) [below of=e3,xshift=-.4cm,yshift=-.6cm]  {$v_3$}
+    edge [pre] node [above,xshift=-.3cm] {$4$} (e2)
+    edge [post] node [below] {$5$} (e4)
+    edge [post] node [below,yshift=.1cm,xshift=.3cm] {$2$} (e3) ;
+
+    \node [process] (f1) [below of=c1,yshift=-3.5cm,xshift=2cm] {$v_5$};
+
+    \node [process] (f2) [right of=f1,xshift=.5cm,yshift=2cm] {$v_1$}
+    edge [red,post] node [above,xshift=-.2cm] {\textcolor{black}{$1$}} (f1);
+
+    \node [place] (f3) [right of=f1,xshift=2cm] {$v_2$}
+    edge [pre] node [above,xshift=.2cm] {$7$} (f2);
+
+    \node [process] (f4) [below of=f1,xshift=.4cm,yshift=-.6cm] {$v_4$}
+    edge [red,pre] node [below,yshift=.2cm,xshift=-.3cm] {\textcolor{black}{$1$}} (f1)
+    edge [pre] node [above,xshift=.3cm] {$6$} (f2)
+    edge [post]  node [above] {$3$} (f3);
+
+    \node [process] (f5) [below of=f3,xshift=-.4cm,yshift=-.6cm]  {$v_3$}
+    edge [red,pre] node [above,xshift=-.3cm] {\textcolor{black}{$4$}} (f2)
+    edge [post] node [below] {$5$} (f4)
+    edge [post] node [below,yshift=.1cm,xshift=.3cm] {$2$} (f3) ;
+
+    \node [process] (g1) [below of=d3,yshift=-3.5cm,xshift=-.8cm] {$v_5$};
+
+    \node [process] (g2) [right of=g1,xshift=.5cm,yshift=2cm] {$v_1$}
+    edge [red,post] node [above,xshift=-.2cm] {\textcolor{black}{$1$}} (g1);
+
+    \node [process] (g3) [right of=g1,xshift=2cm] {$v_2$}
+    edge [pre] node [above,xshift=.2cm] {$7$} (g2);
+
+    \node [process] (g4) [below of=g1,xshift=.4cm,yshift=-.6cm] {$v_4$}
+    edge [red,pre] node [below,yshift=.2cm,xshift=-.3cm] {\textcolor{black}{$1$}} (g1)
+    edge [pre] node [above,xshift=.3cm] {$6$} (g2)
+    edge [red,post]  node [above] {\textcolor{black}{$3$}} (g3);
+
+    \node [process] (g5) [below of=g3,xshift=-.4cm,yshift=-.6cm]  {$v_3$}
+    edge [red,pre] node [above,xshift=-.3cm] {\textcolor{black}{$4$}} (g2)
+    edge [post] node [below] {$5$} (g4)
+    edge [post] node [below,yshift=.1cm,xshift=.3cm] {$2$} (g3) ;
+
+\end{scope}
+
+}
+\end{document}

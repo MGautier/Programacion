@@ -1,0 +1,29 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikz{1}{Problema de los puentes de Königsberg}
+{
+  \tikzstyle{place}=[circle,thick,draw=green!20,fill=blue!20,minimum size=5mm]
+  \tikzstyle{texto}=[minimum size=5mm]
+
+  \node [place] (c1) {$A$};
+
+  \node [place] (c2) [right of=c1,xshift=2cm] {$B$}
+  edge [bend right=20] node [above] {$2$} (c1)
+  edge [bend left=20] node [below] {$3$} (c1);
+
+  \node [place] (c3) [right of=c2,xshift=2cm] {$C$}
+  edge [bend right=20] node [above] {$4$} (c2)
+  edge [bend left=20] node [below] {$5$} (c2);
+
+  \node [place] (c4) [above of=c2,yshift=4cm] {$D$}
+  edge [bend right=30] node [above,yshift=.1cm,xshift=-.1cm] {$6$} (c1)
+  edge [] node [left,xshift=-.1cm] {$1$} (c2)
+  edge [bend left=30] node [above,yshift=.1cm,xshift=.1cm] {$7$} (c3);
+
+}
+\end{document}

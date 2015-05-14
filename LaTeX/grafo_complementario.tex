@@ -1,0 +1,46 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\figuratikz{1}{Grafo complementario}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=6mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    \node [place] (c1) {$v_3$};
+
+    \node [place] (c2) [right of=c1, xshift=1.5cm] {$v_4$};
+
+    \node [place] (c3) [above of=c2, yshift=1.5cm] {$v_1$}
+    edge [] (c2)
+    edge [] (c1);
+
+    \node [place] (c4) [above of=c1, yshift=1.5cm] {$v_2$}
+    edge [] (c3);
+
+    \node [texto] (c5) [below of=c2,xshift=-1.3cm,yshift=.1cm,label=above:\textcolor{black}{$G$}] {};
+
+    \node [place] (c6) [right of=c2,xshift=2cm] {$v_3$};
+
+    \node [place] (c7) [right of=c6, xshift=1.5cm] {$v_4$}
+    edge [] (c6);
+
+    \node [place] (c8) [above of=c7, yshift=1.5cm] {$v_1$};
+
+    \node [place] (c9) [above of=c6, yshift=1.5cm] {$v_2$}
+    edge [] (c6)
+    edge [] (c7);
+
+    \node [texto] (c10) [below of=c7,xshift=-1.3cm,yshift=.15cm,label=above:\textcolor{black}{$\overline{G}$}] {};
+
+  \end{scope}
+
+}
+
+\end{document}

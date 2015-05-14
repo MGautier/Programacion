@@ -1,0 +1,39 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{center}%
+\begin{figure}[H]%
+\begin{minipage}[H]{1\columnwidth}%
+\centering%
+\begin{tikzpicture}{node distance=1.3cm,>=stealth',bend angle=45, auto}
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=5mm]
+  \tikzstyle{texto}=[]
+  \tikzstyle{process}=[circle,thick,draw=blue!20,fill=red!20,minimum size=5mm]
+
+    \matrix [matrix of nodes]
+    {
+      \node[minimum height=.75cm,minimum width=4cm,draw] (d1) {menor o igual que $v$}; & \node[minimum height=.75cm,minimum width=1cm,draw] (d2) [right of=d1,xshift=-1.3cm]{\ \ \ \ }; & \node[minimum height=.75cm,minimum width=4cm,draw] (d3) [right of=d1,xshift=-2cm] {mayor o igual que $v$}; & \node[minimum height=.75cm,minimum width=1cm,draw] (d4) [right of=d3,xshift=-1.3cm]{\ \ $v$ \ \ }; \\
+    };
+
+\begin{scope}
+  \node [texto] (t1) [below of=d1,xshift=-2cm] {$l$};
+  \node [texto] (t2) [below of=d1,xshift=2cm] {$i$};
+  \node [texto] (t3) [below of=d2,xshift=.5cm] {$j$};
+  \node [texto] (t4) [below of=d4] {$y$};
+\end{scope}
+
+\draw[post] (t1) -- (-5,-.5);
+\draw[post] (t2) -- (-1,-.5);
+\draw[post] (t3) -- (0,-.5);
+\draw[post] (t4) -- (4.5,-.5);
+
+\end{tikzpicture}
+\caption{Estructura de partición para Quicksort}%
+\end{minipage}%
+\end{figure}%
+\end{center}%
+\end{document}

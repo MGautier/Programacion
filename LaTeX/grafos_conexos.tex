@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+\figuratikz{1}{Ejemplos de grafos conexos}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=6mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    \node [place] (c1) {$v_1$};
+
+    \node [place] (c2) [right of=c1,xshift=1cm] {$v_2$}
+    edge [] (c1);
+
+    \node [place] (c3) [above of=c2,xshift=1cm] {$v_3$}
+    edge [] (c2);
+
+    \node [place] (c4) [right of=c3,yshift=-1cm,xshift=1cm] {$v_4$}
+    edge [] (c3);
+
+    \node [place] (c5) [below of=c3,xshift=.5cm] {$v_5$}
+    edge [] (c4)
+    edge [] (c3);
+
+    \node [texto] (t1) [below of=c2,xshift=.7cm,yshift=.3cm] {Grafo conexo $G_1$};
+
+    \node [place] (c6) [right of=c5,xshift=3cm] {$v_1$};
+
+    \node [place] (c7) [right of=c6,xshift=1cm] {$v_2$}
+    edge [] (c6);
+
+    \node [place] (c8) [above of=c7,xshift=1cm] {$v_3$};
+
+    \node [place] (c9) [right of=c8,yshift=-1cm,xshift=1cm] {$v_4$}
+    edge [] (c8);
+
+    \node [place] (c10) [below of=c8,xshift=.5cm] {$v_5$}
+    edge [] (c9)
+    edge [] (c8);
+
+    \node [texto] (t2) [below of=c7,xshift=.7cm,yshift=.3cm] {Grafo desconexo $G_2$};
+
+
+\end{scope}
+
+}
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\figuratikz{1}{Se cotejan las distancias desde el vértice base $D$}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=6mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+
+    \node [place] (c1) [label=left:$A$]{};
+
+    \node [place] (c2) [right of=c1,yshift=1cm,xshift=.5cm] {}
+    edge [dotted] (c1);
+
+    \node [place] (c3) [right of=c2,yshift=2cm] {}
+    edge [dotted] (c1);
+
+    \node [place] (c4) [right of=c1,xshift=2cm,label=right:$D$] {}
+    edge [densely dotted] (c1)
+    edge [dashed] (c3)
+    edge [dashed] (c2);
+
+    \node [place]  (c5) [left of=c4,yshift=-1cm,xshift=-.5cm] {}
+    edge [dashed] (c4)
+    edge [densely dotted] (c1);
+
+    \node [place]  (c6) [right of=c4,yshift=-1cm] {}
+    edge [dashed] (c4);
+
+
+
+\end{scope}
+}
+\end{document}

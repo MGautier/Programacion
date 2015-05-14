@@ -1,0 +1,62 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{estilos}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\figuratikz{1}{Tres grafos isomorfos entre sí}
+{
+  \tikzstyle{place}=[circle,thick,draw=blue!20,fill=green!20,minimum size=6mm]
+  \tikzstyle{texto}=[]
+
+  \begin{scope}
+
+    \node [place] (c1) {$v_1$};
+
+    \node [place] (c2) [right of=c1,xshift=.4cm] {$v_4$}
+    edge [] (c1);
+
+    \node [place] (c3) [right of=c2,yshift=1.2cm] {$v_2$}
+    edge [] (c1)
+    edge [] (c2);
+
+    \node [place] (c4) [right of=c2,yshift=-1.2cm] {$v_3$}
+    edge [] (c1)
+    edge [] (c2)
+    edge [] (c3);
+
+    \node [place] (c5) [right of=c2,xshift=2cm] {$1$};
+
+    \node [place] (c6) [right of=c5,xshift=1cm,yshift=1.5cm] {$2$}
+    edge [] (c5);
+
+    \node [place] (c7) [right of=c5,yshift=-1.5cm] {$4$}
+    edge [] (c5)
+    edge [] (c6);
+
+    \node [place] (c8) [right of=c5,xshift=1.5cm,yshift=-.5cm] {$3$}
+    edge [] (c5)
+    edge [] (c6)
+    edge [] (c7);
+
+    \node [place] (c9) [right of=c8,xshift=1cm,yshift=.5cm] {$a$};
+
+    \node [place] (c10) [right of=c9,xshift=1cm,yshift=1.5cm] {$b$}
+    edge [] (c9);
+
+    \node [place] (c11) [right of=c9,yshift=-1.5cm] {$d$}
+    edge [] (c9);
+
+    \node [place] (c12) [right of=c9,xshift=1.5cm,yshift=-.5cm] {$c$}
+    edge [] (c9)
+    edge [] (c10)
+    edge [] (c11);
+
+    \draw (c10) .. controls +(-150:2cm) and +(-25:-5cm) .. (c11);
+
+\end{scope}
+
+}
+\end{document}
