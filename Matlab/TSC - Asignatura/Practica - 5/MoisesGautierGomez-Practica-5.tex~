@@ -1,0 +1,51 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+\usepackage{libertine}
+\usepackage{amsmath}
+\renewcommand\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref}
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+
+\parindent = 0mm
+
+\author{Moisés Gautier Gómez}
+\title{\includegraphics[width=10cm]{logo_ugr.png} \\ \includegraphics[width=3cm]{fetch.png}\\ Práctica 4 - Teoría de la Señal y Comunicaciones 
+}
+\date{ }
+
+\begin{document}
+\maketitle
+Ejercicios
+%\lstinputlisting{genexp.m}
+
+\begin{enumerate}
+\item Para la ecuación en diferencias: $y(n)+0.9y(n-2) = 0.3x(n) + 0.6x(n-1) + 0.3x(n-2) $:\\
+
+\textbf{a)} Calcule analíticamente $y(n)$ , para $x(n) = \delta (n)$.
+Como la transformada Z de $x(\delta)$ es 1, la transformada de Z de Y es:
+$$ Y(z) + 0,9 z^{-2} Y(z) = 0,3 X(z) + 0,6 z^{-1} X(z) + 0,3 z^{-2} X(z)$$
+$$ Y(z)(1 + 0,9 z^{-2}) = X(z)(0,3 + 0,6 z^{-1} + 0,3 z^{-2})$$
+$$ Y(z) = \frac{0,3 + 0,6 z^{-1} + 0,3 z^{-2}}{(1 + 0,9 z^{-2}) \cdot X(z)}$$
+$$ X(z) = 1 $$
+$$ Y(z) = \frac{(0,3 + 0,6 z^{-1} + 0,3 z^{-2})}{(1 + 0,9 z^{-2})}$$
+
+Ahora descomponemos en fracciones simples el anterior resultado:
+\begin{eqnarray*}
+Y(z) & = & a + \frac{b + cz^{-1}}{(1 + 0,9z^{-2})} \\ & = & \frac{a \cdot (1 + 0,9z^{-2} + b + cz^{-1})}{(1 + 0,9z^{-2})} \\ & = & \frac{a + a 0,9 z^{-2} + b + cz^{-1}}{(1 + 0,9z^{-2})} \\ & = & \frac{(0,3 + 0,6z^{-1} + 0,3z^{-2})}{(1 + 0,9 z^{-2})}
+\end{eqnarray*}
+
+$$c = \frac{6}{10} $$
+$$a = \frac{0,3}{0,9} = \frac{1}{3} $$
+$$a + b = \frac{3}{10} \rightarrow b = \frac{3}{10} - \frac{1}{3} = - \frac{1}{30} $$
+
+\begin{eqnarray*}
+Y(z) & = & \frac{1}{3} + \frac{- \frac{1}{30} + \frac{6}{10}z^{-1}}{(1 + 0,9 z^{-2})} \\ & = & \frac{1}{3} + \frac{- \frac{1}{30} + \frac{6}{10}z^{-1}}{(1 - (-0,9) z^{-2})} \\ & = & \frac{1}{3} + \frac{- \frac{1}{30} + \frac{6}{10}z^{-1}}{(1 - \sqrt{-0,9} z^{-1})(1 + \sqrt{-0,9} z^{-1})}
+\end{eqnarray*}
+
+$$\frac{A}{(1 - \sqrt{-0,9} z^{-1})} + \frac{B}{(1 + \sqrt{-0,9} z^{-1})} = \frac{- \frac{1}{30} + \frac{6}{10}z^{-1}}{(1 - \sqrt{-0,9} z^{-1})(1 + \sqrt{-0,9} z^{-1})}$$
+\end{enumerate}
+\end{document}
+

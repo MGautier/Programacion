@@ -1,0 +1,12 @@
+% Se nos pide que calculemos la respuesta transitoria de la respuesta
+% total de la señal anterior.
+
+% rgp = respuesta en régimen permanente
+% rt = respuesta transitoria
+
+rgp = -1,8405;
+rt = y - rgp;
+plot(rt)
+xlabel('Longitud')
+ylabel('Coeficientes')
+title('\it{Respuesta transitoria obtenida del escalón}','FontSize',14)

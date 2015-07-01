@@ -1,0 +1,22 @@
+%Definimos la función escalón y la representamos para una amplitud de
+% valor 3.
+
+x = zeros(1,250);
+t = -49:200;
+x (50:250) = 3;
+stem(t,x) ;
+title('Función escalón');
+
+
+a = [10 -5 1];
+b = [1 -5 10];
+
+% Filtramos los vectores anteriores de coeficientes junto a la nueva
+% función escalón obtenido previamente. Así podemos obtener la respuesta
+% de dicho impluso y hallar la respuesta en régimen permanente.
+
+y = filter(b,a,x);
+plot(y)
+xlabel('Longitud')
+ylabel('Coeficientes')
+title('\it{Respuesta al escalón}','FontSize',14)

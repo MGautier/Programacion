@@ -1,0 +1,79 @@
+#!/bin/perl
+
+#
+# Fichero Tarea3-1.perl
+# @author Moisés Gautier Gómez
+# @version 1.0 28/11/13
+#
+
+#
+# ******************************************************************************
+#                   (c) Copyright 2013 Moisés Gautier Gómez
+# 
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+# ******************************************************************************
+#
+
+
+# Alumno: Moises Gautier Gomez
+# DNI: 44056987-G
+# Titulacion: Ingenieria en Informatica
+# Programación de servidores web HTML, Perl/CGI, PHP y My SQL, 5ª Edición
+
+my $fichero;
+my $salida = "parrafos.html";
+
+if($ARGV[0] eq "")
+{
+	print "Introduzca el nombre del fichero a leer \n";
+	$fichero = <STDIN>;
+
+# Con esta funcion eliminamos el caracter de retorno de carro introducido por el usuario
+	chop($fichero);
+}
+else
+{
+	$fichero = $ARGV[0];
+}
+
+print "El fichero se llama: $fichero \n";
+
+open(ENTRADA,"<$fichero") || die "ERROR: No puedo abrir el fichero $fichero \n";
+open(SALIDA, ">$salida") || die "ERROR: No puedo abrir el fichero $salida \n";
+
+print SALIDA "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//ES\"
+   \"http://www.w3.org/TR/html4/loose.dtd\">
+<html lang=\"es\">
+  <meta charset=\"utf-8\">
+  <head>
+	<title>Tarea 3 - Abrir ficheros con perl</title>
+  </head>
+<body>
+<p>Aquí se presentan las lineas del fichero leido del sistema </p><br>
+";
+
+while($linea = <ENTRADA>)
+{
+	chop($linea);
+	print SALIDA "<p> $linea </p> \n";
+	print SALIDA "<br> \n";
+}
+
+print SALIDA "</body>
+</html>";
+
+close(ENTRADA);
+close(SALIDA);
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//ES"
+   "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es">
+  <meta charset="utf-8">
+	<head>
+	<style type="text/css">
+		h1,h2,h3,h4,h5,h6,p,body{color:white;
+			font-family:georgia;}
+
+		body{background:#77787B;}
+	</style>
+	<title>
+	Tarea 5-2 - Mi script de php con mysql
+	</title>
+	<meta name="keywords" content="scripts,php">
+  </head>
+<body>
+<p> Esta es mi quinta tarea del curso de PHP </p>
+<p> Mete tus datos para que te enviemos un regalo a casa ;) </p>
+<form action="tarea5-2.php" method="post">
+Nombre: <input type="text" name="nombre" size="25" maxlength="25"> <br>
+Apellido1: <input type="text" name="apellidos1" size="50" maxlength="50" > Apellido2: <input type="text" name="apellidos2" size="50" maxlength="50" > <br>
+Teléfono: <input type="text" name="telefono" size="9" maxlength="12" > <br>
+Dirección: <input type="text" name="direccion" size="50" maxlength="50" > Numero: <input type="text" name="numero" size="3" maxlength="3"> Piso: <input type="text" name="piso" size="3" maxlength="3"> CP: <input type="text" name="cp" size="5" maxlength="5"> <br>
+Localidad: <input type="text" name="localidad" size="50" maxlength="50"> Provincia: <input type="text" name="provincia" size="50" maxlength="50"> <br> <br>
+<input type="submit" value="Enviar" onclick="return confirm('Formulario enviado')">
+</form>
+<p> Si en un año no te llega a la dirección, estas perdido amigo :( </p>
+</body>
+</hmtl>

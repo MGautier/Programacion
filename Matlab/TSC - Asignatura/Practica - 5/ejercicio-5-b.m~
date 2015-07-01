@@ -1,0 +1,12 @@
+% Calculamos los polos y los ceros de la función de transferencia
+% aplicando la función tf2zp a los coeficientes proporcionados 
+% anteriormente.
+
+[z,p,k] = tf2zp(b,a);
+
+% Definimos nuestra región de convergencia para la circunferencia
+% en dónde podremos obtener si nuestro sistema de análisis es
+% causal o no, e inestable o no.
+
+zplane(b,a);
+title('Polos y Ceros');

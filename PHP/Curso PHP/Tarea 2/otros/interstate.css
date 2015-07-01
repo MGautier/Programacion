@@ -1,0 +1,63 @@
+/*
+ * Lamborghini Interstate Font-Pack
+ */
+
+/* 
+This CSS resource incorporates links to font software which is 
+the valuable copyrighted property of WebType LLC, The Font Bureau 
+and/or their suppliers. You may not attempt to copy, install, 
+redistribute, convert, modify or reverse engineer this font 
+software. Please contact WebType with any questions: www.webtype.com
+*/
+
+/* Interstate */
+@font-face {
+	font-family: "Interstate";
+	src: url("/src/fonts/Interstate/5e3fc048-6bf6-4b47-b09a-8d0bedcea497-2.eot");
+	src: local("☺"),
+		 url("/src/fonts/Interstate/5e3fc048-6bf6-4b47-b09a-8d0bedcea497-3.woff") format("woff"),
+		 url("/src/fonts/Interstate/5e3fc048-6bf6-4b47-b09a-8d0bedcea497-1.ttf") format("truetype"),
+		 url("/src/fonts/Interstate/5e3fc048-6bf6-4b47-b09a-8d0bedcea497-2.eot?") format("embedded-opentype");
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+/* Interstate Bold */
+@font-face {
+	font-family: "Interstate Bold";
+	src: url("/src/fonts/Interstate-Bold/2c996610-b694-4382-af3e-b6065674a822-2.eot");
+	src: local("☺"),
+		 url("/src/fonts/Interstate-Bold/2c996610-b694-4382-af3e-b6065674a822-3.woff") format("woff"),
+		 url("/src/fonts/Interstate-Bold/2c996610-b694-4382-af3e-b6065674a822-1.ttf") format("truetype"),
+		 url("/src/fonts/Interstate-Bold/2c996610-b694-4382-af3e-b6065674a822-2.eot?") format("embedded-opentype");
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+}
+
+/* Interstate Black */
+@font-face {
+	font-family: "Interstate Black";
+	src: url("/src/fonts/Interstate-Black/77ea7852-c5e4-4bd8-b870-792be65f801d-2.eot");
+	src: local("☺"),
+		 url("/src/fonts/Interstate-Black/77ea7852-c5e4-4bd8-b870-792be65f801d-3.woff") format("woff"),
+		 url("/src/fonts/Interstate-Black/77ea7852-c5e4-4bd8-b870-792be65f801d-1.ttf") format("truetype"),
+		 url("/src/fonts/Interstate-Black/77ea7852-c5e4-4bd8-b870-792be65f801d-2.eot?") format("embedded-opentype");
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+}
+
+/* Interstate Light */
+@font-face {
+	font-family: "Interstate Light";
+	src: url("/src/fonts/Interstate-Light/54adc051-5ea0-402b-9f62-89fb57ead532-2.eot");
+	src: local("☺"),
+		 url("/src/fonts/Interstate-Light/54adc051-5ea0-402b-9f62-89fb57ead532-3.woff") format("woff"),
+		 url("/src/fonts/Interstate-Light/54adc051-5ea0-402b-9f62-89fb57ead532-1.ttf") format("truetype"),
+		 url("/src/fonts/Interstate-Light/54adc051-5ea0-402b-9f62-89fb57ead532-2.eot?") format("embedded-opentype");
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+}

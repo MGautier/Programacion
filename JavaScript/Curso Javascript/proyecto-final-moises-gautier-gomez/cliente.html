@@ -1,0 +1,95 @@
+<!doctype HTML PUBLIC "-//W3C//DTD HTML 4.01//ES"
+	  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>Cliente - servidor en node</title>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+  </head>
+  <body>
+    <p>Website de las tareas del hogar universitario</p>
+    <ul>
+      <li>
+	<button id="1">
+	  Nueva tarea
+	</button>
+	<div style="display: none" id="nuevo">
+	  <div id="form">
+	    <form id="form" name="form">
+	      <label for="Dia">Dia:</label>
+	      <input type="text" id="dia" name="dia" placeholder="Introduce el dia (Ej: 30-11-2014)" /><br/>
+	      <label for="contenido">Contenido:</label>
+	      <input type="text" name="contenido" id="contenido" placeholder="Introduce el contenido"/><br/>
+	      <label for="realizado">Realizado:</label>
+	      <input type="text" name="realizado" id="realizado" placeholder="¿Esta terminado?" /><br/>
+	      <input type="submit" value="Enviar" />
+	    </form>
+	  </div>
+	  
+	</div>
+      </li>
+      <li>
+	<button id="2">
+	  Listar tareas
+	</button>
+	<div style="display: none" id="listado">
+	  <p>Listado de tareas en JSON</p>
+	  <div id="lista"></div>
+	  <br />
+	</div>
+      </li>
+      <li>
+	<label for="searching">Inserte el contenido a buscar: </label> 
+	<input type="text" name="search" id="search"/>
+	<button id="3">
+	  Hacer una busqueda
+	</button>
+	<button id="4">
+	  Limpiar input
+	</button>
+	<div style="display: none" id="searching">
+	  <div id="busqueda"></div>
+	  <br />
+	</div>
+      </li>
+      <li><a target="_blank" href="https://www.youtube.com/watch?v=V_Nr31Lv6H8">Lo que pasa al rescatar un gato en rusia</a></li>
+    </ul>
+    <p>Ayuda: </p>
+    <ul>
+      <li> Las entradas en el sistema son como la siguiente: [30-11-2014], [Tarea1], [Por hacer,Hecha,En progreso, etc] </li>
+      <li> Para hacer una busqueda puedes insertar: o bien la frase entera del contenido de la entrada o la subcadena de la frase que desees [Hay distincion entre minusculas y mayusculas]. 
+	<ul>
+	  <li>Ejemplo: Esta es la tarea 1 - Busqueda: tarea [Tarea es invalido]</li>
+	</ul>
+      </li>
+    </ul>
+    <script>
+      $( document ).ready(function(){
+      $( "#1" ).click(function() {
+      $( "#nuevo" ).toggle( "slow" );
+      $( "#form" ).submit(function(){
+      $.post('/nuevo/'+$("#dia").val()+'/'+$("#contenido").val()+'/'+$("#realizado").val(),function( data ){
+      $( "#resnuevo" ).html("La tarea es para el dia: "+data.dia+" \n cuyo contenido es: "+data.contenido+" \n y su estado es: "+data.realizada+" \n");
+      });
+      });
+      });
+      $( "#2" ).click(function() {
+      $( "#listado" ).toggle( "slow" );
+      $.get('/listado',function( data ){
+      $( "#lista" ).html(data);
+      });
+      });
+      $( "#3" ).click(function() {
+      $( "#searching" ).toggle( "slow" );
+      $.get('/busqueda/'+$("#search").val(),function( data ){
+      $( "#busqueda" ).html(data);
+      });
+      });
+      $( "#4").click(function() {
+      $( "#searching" ).toggle( "slow" );
+      $( "#search" ).val('');
+      });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+Claves: * es * 
+Claves: * te gusta * 
+Claves: _ conoces a * 
+Claves: _ eres * 
+Claves: _ estoy * 
+Claves: _ me gusta * 
+Claves: _ me gustan * 
+Claves: _ te gustan * 
+Claves: actor 
+Claves: actriz 
+Claves: adam 
+Claves: adios 
+Claves: aficiones 
+Claves: ahora 
+Claves: algo 
+Claves: amigo 
+Claves: amor 
+Claves: androides 
+Claves: antibot 
+Claves: ayudarme 
+Claves: bebida 
+Claves: biblioteca 
+Claves: bien 
+Claves: botmaster 
+Claves: cambiar 
+Claves: cine 
+Claves: clima 
+Claves: coche 
+Claves: color 
+Claves: conocerte 
+Claves: conoces a * 
+Claves: creo 
+Claves: curiosidad 
+Claves: de dónde eres 
+Claves: demasiado 
+Claves: dime algo 
+Claves: drogas 
+Claves: dónde está 
+Claves: dónde estás 
+Claves: edad 
+Claves: en serio 
+Claves: eres * 
+Claves: eres alta 
+Claves: eres chica 
+Claves: eres chico 
+Claves: eres chico o chica 
+Claves: eres rara 
+Claves: eres turista 
+Claves: es posible 
+Claves: estoy * 
+Claves: estoy aburrida 
+Claves: estoy aburrido 
+Claves: estudias o trabajas 
+Claves: estás casada 
+Claves: exacto 
+Claves: família 
+Claves: fea 
+Claves: gafas 
+Claves: gracias 
+Claves: guapa 
+Claves: hablar 
+Claves: hermano 
+Claves: hola 
+Claves: hora 
+Claves: humor 
+Claves: idioma 
+Claves: ingles 
+Claves: inteligencia artificial 
+Claves: interesante 
+Claves: internet 
+Claves: juegos 
+Claves: lejos 
+Claves: lo ves 
+Claves: mal 
+Claves: me alegro 
+Claves: me gusta * 
+Claves: me gustan * 
+Claves: me llamo 
+Claves: mentirosa 
+Claves: mi descripción 
+Claves: mi música favorita 
+Claves: moto 
+Claves: muerte 
+Claves: más 
+Claves: música 
+Claves: nacimiento 
+Claves: nada 
+Claves: no 
+Claves: no importa 
+Claves: no lo he 
+Claves: no quiero 
+Claves: no sabes nada 
+Claves: no te entiendo 
+Claves: ok 
+Claves: opinión 
+Claves: para qué sirve un bot 
+Claves: parece 
+Claves: password 
+Claves: patético 
+Claves: poesía 
+Claves: por qué 
+Claves: por supuesto 
+Claves: problema 
+Claves: quiero 
+Claves: quién es 
+Claves: quiénesx 
+Claves: qué 
+Claves: qué entiendes 
+Claves: qué eres 
+Claves: qué es 
+Claves: qué es un bot 
+Claves: qué es x 
+Claves: qué haces 
+Claves: qué me recomiendas 
+Claves: qué tal 
+Claves: qué te gusta de las mujeres 
+Claves: qué te gusta de los hombres 
+Claves: quéesx 
+Claves: responde 
+Claves: risas 
+Claves: sara 
+Claves: soy de 
+Claves: soy especial 
+Claves: soy perfecto 
+Claves: soy un chico 
+Claves: soy un chico o una chica 
+Claves: soy una chica 
+Claves: suerte 
+Claves: sí 
+Claves: tabaco 
+Claves: también 
+Claves: te gusta * 
+Claves: te gustan * 
+Claves: te importa 
+Claves: te odio 
+Claves: todo 
+Claves: tu nombre 
+Claves: un café 
+Claves: un libro 
+Claves: verano 
+Claves: vida 
+Claves: y 
+Claves: y tú 
+Claves: yo también 

@@ -1,0 +1,1 @@
+X = Fourier(y,1);

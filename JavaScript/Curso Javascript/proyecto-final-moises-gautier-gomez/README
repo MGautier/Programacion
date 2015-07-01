@@ -1,0 +1,11 @@
+Alumno: Moisés Gautier Gómez
+
+He usado los siguiente paquetes de nodejs:
+- express [http://expressjs.com/]
+- body-parser [https://github.com/expressjs/body-parser]
+
+-> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf [Esto lo uso para hacer las busqueda de las cadenas o subcadenas en los contenidos de las entradas.
+
+Ejecuto con el comando nodejs servidor.js para desplegar el servidor. Voy a la dirección ip que ofrece el servicio, 127.0.0.1:8080/ y en ese momento empiezo a interactuar con el cliente (cliente.html) que es devuelto por el servidor para la ruta raíz del mismo.
+
+La web en heroku es la siguiente: http://rocky-river-2566.herokuapp.com/

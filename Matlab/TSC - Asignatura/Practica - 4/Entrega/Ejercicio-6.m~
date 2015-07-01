@@ -1,0 +1,12 @@
+%Se nos pide que carguemos una senal de audio en nuestro
+% sistema y representemos su espectograma de la misma.
+
+% Primero vamos a cargar el fichero en nuestro sistema
+
+load signal.asc;
+
+% Ahora la representamos con el espectograma muestreando
+% la señal a 8 Khz con una longitud de ventana de 20ms
+% para el tipo de ventana Hamming.
+
+specgram(signal,256,8000,hamming(20),0);
