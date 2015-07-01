@@ -1,0 +1,12 @@
+g++ -ansi -pedantic -Wall   -c -o cadena.o cadena.cpp
+g++ -ansi -pedantic -Wall   -c -o pruebacadena.o pruebacadena.cpp
+pruebacadena.cpp: In function ‘int main()’:
+pruebacadena.cpp:14: error: no matching function for call to ‘Cadena::Cadena(int, char)’
+cadena.h:15: note: candidates are: Cadena::Cadena(const char*)
+cadena.h:14: note:                 Cadena::Cadena(const Cadena&)
+cadena.h:13: note:                 Cadena::Cadena(size_t, const char*) <near match>
+pruebacadena.cpp:14: error: no matching function for call to ‘Cadena::Cadena(int, char)’
+cadena.h:15: note: candidates are: Cadena::Cadena(const char*)
+cadena.h:14: note:                 Cadena::Cadena(const Cadena&)
+cadena.h:13: note:                 Cadena::Cadena(size_t, const char*) <near match>
+make: *** [pruebacadena.o] Error 1

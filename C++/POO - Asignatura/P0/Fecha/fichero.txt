@@ -1,0 +1,12 @@
+g++ -ansi -pedantic -Wall   -c -o prueba-auto.o prueba-auto.cpp
+prueba-auto.cpp: In function ‘int main(int, const char**)’:
+prueba-auto.cpp:238: error: no matching function for call to ‘strstr(const Fecha&, const char [8])’
+/usr/include/string.h:319: note: candidates are: char* strstr(char*, const char*)
+/usr/include/string.h:321: note:                 const char* strstr(const char*, const char*)
+prueba-auto.cpp:239: error: no matching function for call to ‘strstr(const Fecha&, const char [6])’
+/usr/include/string.h:319: note: candidates are: char* strstr(char*, const char*)
+/usr/include/string.h:321: note:                 const char* strstr(const char*, const char*)
+prueba-auto.cpp:240: error: no matching function for call to ‘strstr(const Fecha&, const char [5])’
+/usr/include/string.h:319: note: candidates are: char* strstr(char*, const char*)
+/usr/include/string.h:321: note:                 const char* strstr(const char*, const char*)
+make: *** [prueba-auto.o] Error 1

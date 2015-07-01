@@ -1,0 +1,20 @@
+
+[[[[[[[[[[[[[[[[[[[[ !Bravo a todos los alumnos! ]]]]]]]]]]]]]]]]]]]]
+Por haber hecho el esfuerzo de teclear este programa. Repito:
+[[[[[[[[[[[[[[[[[[[[ !Bravo a todos los alumnos! ]]]]]]]]]]]]]]]]]]]]
+Hola
+El elemento 87 de la cadena es: v
+Y tras modificar algunos caracteres, la cadena queda:
+Por haber hecho el esfuerzo de teclear este programa. pepito:
+[[[[[[[[[[[[[[[[[[[[ !Bravo a topos los alumnos! ]]]]]]]]]]]]]]]]]]]]
+ERROR CAPTURADO. Mensaje: "Cadena::at: índice fuera de rango"
+subcadena(6, 5) de Nihil novum sub solem: "novum"
+Cadena a = "novum", b = "Nihil novum sub solem";
+ a < b: false
+ a > b: true
+ a <= b: false
+ a >= b: true
+ a == b: false
+ a != b: true
+La cadena a tiene  5 caracteres: true
+La cadena b tiene 21 caracteres: true
