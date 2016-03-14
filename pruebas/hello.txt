@@ -1,2 +1,6 @@
 Esto es un archivo de prueba
+<<<<<<< master
 las cosas son así
+=======
+más cosas que probar en local
+>>>>>>> local
